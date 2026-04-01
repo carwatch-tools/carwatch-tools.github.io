@@ -3,6 +3,7 @@ title: Resources
 description: Links to CARWatch software components, repositories, and related resources.
 menu_title: Resources
 menu_order: 4
+full_width: true
 ---
 
 # Resources

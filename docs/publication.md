@@ -3,6 +3,7 @@ title: Publication
 description: Scientific background and citation information for CARWatch.
 menu_title: Publication
 menu_order: 5
+full_width: true
 ---
 
 # Publication

@@ -3,6 +3,7 @@ title: Components
 description: Description of the main parts of the CARWatch framework.
 menu_title: Components
 menu_order: 3
+full_width: true
 ---
 
 # Components

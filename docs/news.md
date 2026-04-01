@@ -3,6 +3,7 @@ title: News
 description: Project updates and recent developments in CARWatch.
 menu_title: News
 menu_order: 6
+full_width: true
 ---
 
 # News

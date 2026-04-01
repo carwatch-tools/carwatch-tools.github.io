@@ -8,6 +8,8 @@ The project overview, platform links, publication highlight, and privacy-policy 
 
 This site uses [MinimalDoc](https://github.com/studiowebux/minimaldoc) as its static site generator and theme.
 
+MinimalDoc also generates `llms.txt` and related machine-readable companion files. These can be useful for AI-assisted browsing or downstream tooling.
+
 Once GitHub Pages is enabled to use GitHub Actions, the public site will be available at:
 
 `https://mad-lab-fau.github.io/carwatch/`
@@ -55,28 +57,28 @@ make doctor
 Build the site locally with:
 
 ```bash
-make build
+make
 ```
 
-Serve it over HTTP at `http://localhost:4173` with:
-
-```bash
-make serve
-```
-
-Open the locally served site in your browser with:
+Serve the built site and open it in your browser with:
 
 ```bash
 make view
 ```
 
-Run the default preview workflow with:
+Build without serving with:
 
 ```bash
-make
+make build
 ```
 
-This opens `http://localhost:4173` and starts the local server.
+If you want to run the server without opening the browser:
+
+```bash
+make serve
+```
+
+The server runs in the foreground until you stop it with `Ctrl+C`.
 
 To use a different port temporarily:
 
@@ -101,10 +103,19 @@ make clean-all
 
 - Local build output is written to `.build/site`.
 - The local MinimalDoc binary is stored in `.tools/bin/minimaldoc`.
-- If `.tools/bin/minimaldoc` is missing, `make build`, `make serve`, and `make` will install it automatically when Go is available.
+- If `.tools/bin/minimaldoc` is missing, `make`, `make build`, `make serve`, and `make view` will install it automatically when Go is available.
 - The first local install may take a moment because Go downloads the MinimalDoc module and its dependencies.
 - If you are offline and do not already have a working `minimaldoc` binary, local installation will fail.
 - In that case, reconnect to the network and run `make install`.
+- `make` only builds the site. It does not start the server.
+- `make view` starts a local server, opens the browser, and should stop the server again when you press `Ctrl+C` in that terminal.
+- If `make serve` reports that the port is already in use, check for an existing listener with:
+
+```bash
+lsof -nP -iTCP:4173 -sTCP:LISTEN
+```
+
+Stop the old process and then run `make serve` again.
 
 `make clean` removes only generated site output in `.build/`.
 

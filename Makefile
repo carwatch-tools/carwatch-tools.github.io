@@ -9,7 +9,7 @@ DIST_DIR := ./.build/site
 PORT ?= 4173
 BASE_URL ?= http://localhost:$(PORT)
 
-.DEFAULT_GOAL := preview
+.DEFAULT_GOAL := build
 
 .PHONY: install build serve view preview clean clean-all doctor
 
@@ -43,10 +43,18 @@ serve: build
 	cd $(DIST_DIR) && python3 -m http.server $(PORT)
 
 view:
-	open http://localhost:$(PORT)
+	cd $(DIST_DIR) && { \
+		python3 -m http.server $(PORT) & \
+		server_pid=$$!; \
+		trap 'kill $$server_pid 2>/dev/null || true' INT TERM EXIT; \
+		sleep 1; \
+		open http://localhost:$(PORT); \
+		wait $$server_pid; \
+	}
 
-preview: build
-	cd $(DIST_DIR) && python3 -m http.server $(PORT) & sleep 1 && open http://localhost:$(PORT) && wait
+preview:
+	@echo "Use 'make' to build the site."
+	@echo "Use 'make view' to serve the built site and open http://localhost:$(PORT)."
 
 clean:
 	rm -rf ./.build

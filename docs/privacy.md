@@ -3,6 +3,7 @@ title: Privacy Policy
 description: Privacy information for the CARWatch apps and project pages.
 menu_title: Privacy
 menu_order: 7
+full_width: true
 ---
 
 # Privacy Policy
