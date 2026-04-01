@@ -1,0 +1,37 @@
+title: CARWatch
+description: Open-source framework for objective saliva sampling studies, including mobile apps, web-based study preparation, and log processing.
+author: CARWatch Project
+base_url: ""
+
+theme: default
+dark_mode: false
+
+enable_llms: true
+enable_search: true
+clean_urls: true
+
+stale_warning:
+  enabled: false
+  threshold_days: 365
+  show_update_date: true
+
+social_links:
+  - name: GitHub
+    url: https://github.com/mad-lab-fau/carwatch
+    icon: github
+
+footer:
+  copyright: "CARWatch project"
+  links:
+    - title: Project
+      items:
+        - text: Home
+          url: /
+        - text: Resources
+          url: /resources/
+        - text: Publication
+          url: /publication/
+    - title: Policies
+      items:
+        - text: Privacy
+          url: /privacy/

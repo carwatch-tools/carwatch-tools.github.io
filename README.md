@@ -1,64 +1,134 @@
-# Welcome to CARWatch!
+# CARWatch
 
 CARWatch is an open-source framework to support **objective** and **low-cost** assessment of cortisol samples in real-world, unsupervised environments. It is especially suitable for **cortisol awakening response (CAR)** research, but not limited to this application.
 
-It consists of an [Android application](https://github.com/mad-lab-fau/carwatch-app) that schedules sampling times and tracks
-them by scanning a barcode on the respective sampling tube as well as a [web app](https://github.com/mad-lab-fau/carwatch-web/) that provides tools to 
-**configure studies** and **prepare the study materials** and to **process the log data** recorded by the app.
-Alternatively, users with programming experience can use the corresponding [Python package](https://github.com/mad-lab-fau/carwatch-python) that provides the same range of functionality.
+## Project Website
 
-**Get the Android app on the Play Store:**
-[![Google Play](https://img.shields.io/badge/Google%20Play-CARWatch-3DDC84?logo=google-play&logoColor=white)](https://play.google.com/store/apps/details?id=de.fau.cs.mad.carwatch)
+The project overview, platform links, publication highlight, and privacy-policy page are hosted as a GitHub Pages site generated from the source files in [`docs/`](docs/).
 
-**Visit the [CARWatch Website](https://mad-lab-fau.github.io/carwatch-web/)**
+This site uses [MinimalDoc](https://github.com/studiowebux/minimaldoc) as its static site generator and theme.
 
+Once GitHub Pages is enabled to use GitHub Actions, the public site will be available at:
 
+`https://mad-lab-fau.github.io/carwatch/`
 
-## Features
+For local editing, update the source files in [`docs/`](docs/), especially:
 
-To use CARWatch, you need to prepare the study materials and configure the app. The whole workflow is
-illustrated in the following figure:
+- [`docs/config.yaml`](docs/config.yaml)
+- [`docs/index.md`](docs/index.md)
+- [`docs/overview.md`](docs/overview.md)
+- [`docs/components.md`](docs/components.md)
+- [`docs/resources.md`](docs/resources.md)
+- [`docs/publication.md`](docs/publication.md)
+- [`docs/privacy.md`](docs/privacy.md)
+- [`docs/TOC.md`](docs/TOC.md)
 
-<img src="./docs/img/carwarch_overview.png" width="600" alt="CARWatch Workflow">
+The GitHub Pages deployment workflow is defined in [`.github/workflows/docs.yml`](.github/workflows/docs.yml).
 
+## Local Preview
 
-## Usage
-CARWatch is designed to be used in CAR studies.
+### Requirements
 
+Local development requires:
 
-## License
+- Go installed and available on `PATH`
+- network access if MinimalDoc is not already available locally
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+The GitHub Actions deployment workflow does **not** depend on any local `/tmp` paths. It installs MinimalDoc during CI and builds the site independently of your machine.
 
+### First-Time Setup
 
-## Citing carwatch
+Bootstrap the MinimalDoc binary with:
 
-If you use the carwatch framework in your work, please report the version you used in the text. Additionally, please also cite [our paper](https://www.sciencedirect.com/science/article/abs/pii/S0306453023000513?via%3Dihub) published in Psychoneuroendocrinology:
-
+```bash
+make install
 ```
-Richer, R., Abel, L., Küderle, A., Eskofier, B. M., & Rohleder, N. (2023). CARWatch – A smartphone application for 
-improving the accuracy of cortisol awakening response sampling. Psychoneuroendocrinology, 151, 106073. 
+
+This installs MinimalDoc into the repo-local path `.tools/bin/minimaldoc`.
+
+If `make install` fails, check your setup with:
+
+```bash
+make doctor
+```
+
+Build the site locally with:
+
+```bash
+make build
+```
+
+Serve it over HTTP at `http://localhost:4173` with:
+
+```bash
+make serve
+```
+
+Open the locally served site in your browser with:
+
+```bash
+make view
+```
+
+Run the default preview workflow with:
+
+```bash
+make
+```
+
+This opens `http://localhost:4173` and starts the local server.
+
+To use a different port temporarily:
+
+```bash
+make serve PORT=4321
+make view PORT=4321
+```
+
+To remove local build output:
+
+```bash
+make clean
+```
+
+To remove both local build output and the repo-local MinimalDoc binary:
+
+```bash
+make clean-all
+```
+
+### Notes
+
+- Local build output is written to `.build/site`.
+- The local MinimalDoc binary is stored in `.tools/bin/minimaldoc`.
+- If `.tools/bin/minimaldoc` is missing, `make build`, `make serve`, and `make` will install it automatically when Go is available.
+- The first local install may take a moment because Go downloads the MinimalDoc module and its dependencies.
+- If you are offline and do not already have a working `minimaldoc` binary, local installation will fail.
+- In that case, reconnect to the network and run `make install`.
+
+`make clean` removes only generated site output in `.build/`.
+
+`make clean-all` removes both `.build/` and `.tools/`.
+
+## Current Scope
+
+The GitHub Pages site currently provides:
+
+- a landing page for the CARWatch project
+- placeholder links for web, Android, iOS, publication, and related resources
+- a structured news section ready for future updates
+- a formal privacy-policy page with placeholder content for app-store compliance work
+
+## Publication
+
+If you use CARWatch in your work, please cite:
+
+```text
+Richer, R., Abel, L., Küderle, A., Eskofier, B. M., & Rohleder, N. (2023). CARWatch – A smartphone application for
+improving the accuracy of cortisol awakening response sampling. Psychoneuroendocrinology, 151, 106073.
 https://doi.org/10.1016/j.psyneuen.2023.106073
 ```
 
+## License
 
-## Studies using CARWatch
-The following papers used CARWatch in their research:
-* Richer, R., Abel, L., Küderle, A., Eskofier, B. M., & Rohleder, N. (2023).
-  CARWatch – A smartphone application for improving the accuracy of cortisol awakening response
-  sampling. Psychoneuroendocrinology, 151, 106073. https://doi.org/10.1016/j.psyneuen.2023.106073
-* Richer, R., Küderle, A., Dörr, J., Rohleder, N., & Eskofier, B. M. (2021). 
-  Assessing the Influence of the Inner Clock on the Cortisol Awakening Response and 
-  Pre-Awakening Movement. 2021 IEEE EMBS International Conference on Biomedical and Health 
-  Informatics (BHI), 1–4. https://doi.org/10.1109/BHI50953.2021.9508529
-* *further papers to be added - let us know if you used CARWatch in your research!*
-
-
-## Contributing
-We welcome contributions to CARWatch! To contribute, please fork this repository 
-and submit a pull request with your changes.
-
-
-## Contact
-If you have any questions or feedback about CARWatch, please contact 
-[Robert Richer](mailto:robert.richer@fau.de).
+This project is licensed under the MIT License. See [`LICENSE`](LICENSE) for details.
