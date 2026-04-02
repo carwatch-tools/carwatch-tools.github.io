@@ -8,7 +8,7 @@ full_width: true
 
 # Resources
 
-The following links are placeholders for the current public CARWatch resources.
+This page collects the main CARWatch software components, repositories, and related references. Links below are placeholders until the final public destinations are added.
 
 ## Web Configurator
 
@@ -31,4 +31,4 @@ The following links are placeholders for the current public CARWatch resources.
 ## Additional Resources
 
 - Python package: link to be added
-- Additional project pages: link to be added
+- GitHub repository: link to be added

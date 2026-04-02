@@ -38,6 +38,7 @@ install:
 
 build: $(MINIMALDOC)
 	$(MINIMALDOC) build $(DOCS_DIR) --base-url $(BASE_URL) --output $(DIST_DIR)
+	python3 ./scripts/postprocess_landing.py $(DIST_DIR)/index.html
 
 serve: build
 	cd $(DIST_DIR) && python3 -m http.server $(PORT)

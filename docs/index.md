@@ -7,20 +7,18 @@ menu_order: 1
 
 # Welcome to CARWatch!
 
-CARWatch is an open-source framework for objective saliva sampling studies. It was originally developed to improve the accuracy of cortisol awakening response sampling by recording saliva sampling events through barcode scans and automated reminders.
-
-Since its first release, CARWatch has evolved from a single Android application into a broader framework for saliva sampling studies. It now includes tools for study configuration, preparation of study materials, participant support during data collection, and processing of the resulting log files.
+CARWatch is an open-source framework for objective saliva sampling studies. It combines mobile apps for recording sample events with web-based tools for study preparation and log processing.
 
 ## Purpose
 
-CARWatch aims to support objective and low-cost saliva sampling in real-world, unsupervised settings. In particular, it is intended to reduce reliance on self-reported sampling times alone and to support better protocol adherence in field studies.
+CARWatch aims to support objective and low-cost saliva sampling in real-world, unsupervised settings. It is intended to reduce reliance on self-reported timestamps alone and to support better protocol adherence in field studies.
 
 ## What CARWatch Includes
 
-- mobile apps for barcode-based sample logging and reminder-based sampling support
-- a web interface for study configuration, barcode generation, QR-code setup, and log processing
-- tools for preparing study materials used during data collection
-- structured export of log data for downstream analysis
+- mobile apps for reminder-based sampling support and barcode-based recording of sample events
+- web-based tools for study configuration, barcode and QR-code generation, and log processing
+- preparation of study materials for data collection
+- structured output for downstream analysis
 
 ## Workflow
 

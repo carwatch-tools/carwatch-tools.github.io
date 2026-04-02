@@ -18,8 +18,12 @@ This paper describes the original motivation for CARWatch and its use in improvi
 
 If you use CARWatch in your work, please cite the publication above and report the version you used where appropriate.
 
-## Updates
+## Scientific Context
 
-A later commentary describing the further development of CARWatch into a broader framework can be linked here once the final reference is available.
+The publication presents CARWatch as a tool for supporting more objective assessment of cortisol awakening response sampling in real-world settings.
+
+## Further References
+
+A later commentary describing the development of CARWatch into a broader framework can be linked here once the final reference is available.
 
 - Updated commentary: link to be added

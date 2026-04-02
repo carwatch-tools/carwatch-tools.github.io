@@ -10,7 +10,7 @@ full_width: true
 
 ## Mobile Apps
 
-The mobile applications are used during data collection. They support reminder-based sampling workflows, barcode-based logging of saliva samples, and study setup through QR codes generated in advance.
+The mobile applications are used during data collection. They support reminder-based sampling workflows, barcode-based recording of sample events, and study setup through QR codes generated in advance.
 
 The Android version is already part of the CARWatch ecosystem. An iOS version is under development.
 
@@ -36,4 +36,4 @@ CARWatch supports generation of barcodes for saliva sampling tubes and QR codes 
 
 After data collection, CARWatch log files can be processed into structured datasets containing relevant timing information, including awakening and saliva sampling times where available.
 
-In the web interface, this processing can be performed client-side in the browser.
+In the web interface, this processing can be performed client-side in the browser, so exported study data does not need to be uploaded to an external server for these steps.

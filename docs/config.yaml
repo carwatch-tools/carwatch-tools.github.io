@@ -1,6 +1,6 @@
 title: CARWatch
 description: Open-source framework for objective saliva sampling studies, including mobile apps, web-based study preparation, and log processing.
-author: CARWatch Project
+author: Robert Richer <robert.richer@fau.de>
 base_url: ""
 
 theme: default
@@ -32,67 +32,54 @@ landing:
       url: /privacy/
   hero:
     title: "CARWatch"
-    subtitle: "An open-source framework for objective saliva sampling studies."
+    subtitle: "An open-source framework for improving objective saliva sampling in the field."
     buttons:
       - text: "Project Overview"
         url: /overview/
         primary: true
-      - text: "View on GitHub"
-        url: https://github.com/mad-lab-fau/carwatch
+      - text: "Resources"
+        url: /resources/
         primary: false
   features:
-    title: "Components"
+    title: "The CARWatch Framework Ecosystem"
     items:
-      - emoji: "~"
+      - emoji: "📱"
         title: "Mobile apps"
-        description: "Participant-facing applications for reminders, barcode-based sample logging, and study setup through QR codes."
-      - emoji: "@"
-        title: "Web interface"
-        description: "Browser-based tools for study configuration, barcode and QR-code generation, and log processing."
-      - emoji: "#"
+        description: "Applications for reminders, barcode-based recording of sample events, and QR-code-based study setup."
+      - emoji: "🌐"
+        title: "Web tools"
+        description: "Browser-based study configuration, barcode and QR-code generation, and processing of exported log files."
+      - emoji: "🏷️"
         title: "Study materials"
-        description: "Barcodes and QR codes can be prepared in advance and distributed with study materials."
-      - emoji: "$"
-        title: "Log processing"
+        description: "Barcodes and QR codes can be prepared in advance and distributed with sampling materials."
+      - emoji: "📊"
+        title: "Structured output"
         description: "Exported CARWatch logs can be transformed into structured datasets for downstream analyses."
   text_blocks:
-    - id: "background"
-      title: "Background"
-      content: "<p>CARWatch was first introduced to improve the accuracy of cortisol awakening response sampling by combining barcode scans with automated reminders. Since its first release, it has evolved from a single Android application into a broader framework for saliva sampling studies.</p><p>The framework now supports study configuration, preparation of study materials, participant support during data collection, and processing of the resulting log files.</p>"
+    - id: "why-carwatch"
+      title: "Why CARWatch"
+      content: "<p>The cortisol awakening response is a widely used marker in psychoneuroendocrine research, but its assessment is highly time-critical. Even short delays between awakening and sampling can systematically distort CAR estimates and contribute to inconsistent findings in field studies.</p><p>CARWatch was developed to support more objective recording of sample events outside the lab. Barcode scans document sample events with timestamps, automated reminders support protocol adherence, and QR codes transfer predefined study settings to the app.</p>"
       alignment: "left"
       max_width: "900px"
       order: 1
+    - id: "what-is-carwatch"
+      title: "What is CARWatch"
+      content: "<p>CARWatch is an open-source framework for saliva sampling studies. It combines mobile applications used during data collection with web-based tools for study preparation, barcode and QR-code generation, and processing of exported log files.</p><p>It was originally developed for cortisol awakening response research, but the framework can also support broader saliva sampling protocols in field settings.</p>"
+      alignment: "left"
+      max_width: "900px"
+      order: 2
     - id: "workflow"
       title: "Workflow"
-      content: "<p>Researchers can configure a study, generate barcodes and QR codes, distribute study materials, collect objective sampling timestamps through the mobile app, and process exported log files after the study.</p><p><img src=\"/img/carwarch_overview.png\" alt=\"Overview of the CARWatch workflow from study preparation to data processing\"></p>"
+      content: "<p>Researchers can configure a study, generate barcodes and QR codes, distribute study materials, collect objective sampling timestamps through the mobile app, and process exported log files after the study. In the web interface, log processing can remain client-side in the browser.</p><p><img src=\"/img/carwarch_overview.png\" alt=\"Overview of the CARWatch workflow from study preparation to data processing\"></p>"
       alignment: "left"
       max_width: "1000px"
-      order: 2
-  links:
-    title: "Resources"
-    items:
-      - icon: "website"
-        title: "Web configurator"
-        description: "Link to be added"
-        url: /resources/
-      - icon: "github"
-        title: "Android app"
-        description: "Repository and Play Store links"
-        url: /resources/
-      - icon: "github"
-        title: "iOS app"
-        description: "Repository and App Store links"
-        url: /resources/
-      - icon: "rss"
-        title: "Publication"
-        description: "Primary paper and related references"
-        url: /publication/
-  opensource:
-    title: "Open Source"
-    description: "CARWatch is developed as an open-source research framework. Source code, project pages, and documentation are collected in this repository."
-    links:
-      - text: "GitHub Repository"
-        url: "https://github.com/mad-lab-fau/carwatch"
+      order: 3
+    - id: "where-next"
+      title: "Where to Go Next"
+      content: "<ul><li><a href=\"/resources/\">Resources</a> for links to the web configurator, Android app, iOS app, publication, and repository.</li><li><a href=\"/overview/\">Overview</a> for the conceptual background and methodological motivation.</li><li><a href=\"/components/\">Components</a> for the role of the mobile apps, web tools, study materials, and log processing.</li><li><a href=\"/publication/\">Publication</a> for the primary paper and scientific context.</li></ul>"
+      alignment: "left"
+      max_width: "900px"
+      order: 4
 
 footer:
   copyright: "CARWatch project"

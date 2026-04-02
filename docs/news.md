@@ -8,7 +8,7 @@ full_width: true
 
 # News
 
-This page is prepared for future project updates.
+This page is reserved for project updates. It is not required to understand the basic CARWatch workflow or the purpose of the framework.
 
 Possible entries include:
 
@@ -22,8 +22,8 @@ Possible entries include:
 
 ### Web-based study preparation and processing
 
-CARWatch now includes browser-based tools for study configuration, barcode and QR-code generation, and processing of exported log data.
+The framework includes browser-based tools for study configuration, barcode and QR-code generation, and processing of exported log data.
 
 ### Broader sampling protocols
 
-The framework is no longer limited to classical cortisol awakening response protocols and can support more flexible saliva sampling schedules.
+CARWatch can support more flexible saliva sampling schedules in addition to classical cortisol awakening response protocols.
