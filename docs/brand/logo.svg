@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 566.9 566.9" style="enable-background:new 0 0 566.9 566.9;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#607D8B;}
+	.st1{fill:#37474F;}
+	.st2{fill:none;stroke:#90A4AE;stroke-width:30;stroke-linecap:round;stroke-miterlimit:10;}
+	.st3{fill:#BDDDF4;}
+	.st4{fill:none;stroke:#14499E;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st5{fill:#478FCC;stroke:#478FCC;stroke-width:5;stroke-miterlimit:10;}
+</style>
+<g>
+	<path class="st0" d="M391.9,369.6c30-49.1,23.8-113.8-18.5-156.5c-49.7-49.7-130.3-49.7-179.7,0c-49.7,49.7-49.7,130.3,0,179.7
+		c42.4,42.4,107.4,48.5,156.5,18.5c8.2-5,16.2-11.2,23.5-18.5C380.7,385.8,386.6,378.2,391.9,369.6z M211.9,374.6
+		c-39.4-39.4-39.4-103.5,0-143s103.5-39.4,143,0s39.4,103.5,0,143S251.6,414,211.9,374.6z"/>
+	<path class="st1" d="M391.9,385.5c-3.9,6.4-8.7,12.6-14.5,18.4c-5.7,5.7-11.7,10.3-18.4,14.5l18.6,18.6l32.8-32.8L391.9,385.5z"/>
+	<path class="st1" d="M474.8,460.8l-61.5-42.9l-23,23l42.9,61.5c10.6,15.4,32.6,17.2,45.7,4.1C492.1,493.2,490.2,471.4,474.8,460.8z
+		"/>
+	<g>
+		<path class="st0" d="M117.7,204.6c0-15.2,5.9-29.9,17.2-41.7l0,0l0,0c11.8-11.3,27-17.2,41.7-17.2c15.2,0,30.4,5.9,41.7,17.2l0,0
+			l3.4,3.4l-3.4,3.4l-76.6,76.6l-3.4,3.4l-3.4-3.4C123.6,235,117.7,219.8,117.7,204.6z"/>
+		<path class="st0" d="M432,162.8c11.8,11.8,17.2,26.5,17.2,41.7s-5.4,30.4-17.2,41.7l-3.4,3.4l-3.4-3.4l-76.6-76.6l-3.4-3.4
+			l3.4-3.4l0,0c11.3-11.3,26.5-17.2,41.7-17.2S420.3,151.5,432,162.8L432,162.8L432,162.8z"/>
+	</g>
+	<path class="st2" d="M83.3,199.7c0-49.2,39.8-89,89-89"/>
+	<path class="st2" d="M24.3,203.7c0-83.3,68.7-152,152-152"/>
+	<path class="st2" d="M483.7,199.7c0-49.2-39.8-89-89-89"/>
+	<path class="st2" d="M542.7,203.7c0-83.3-68.7-152-152-152"/>
+	<g>
+		<polygon class="st3" points="207.5,344.1 251,234 280.7,282 323,322.6 367.2,335.5 		"/>
+		<polyline class="st4" points="367.2,334.9 323,322.6 280.7,282 251,234 207.5,344.1 		"/>
+		<circle class="st5" cx="207.5" cy="344.1" r="6.4"/>
+		<circle class="st5" cx="251" cy="234" r="6.4"/>
+		<circle class="st5" cx="280.7" cy="282" r="6.4"/>
+		<circle class="st5" cx="323" cy="322.6" r="6.4"/>
+		<circle class="st5" cx="367.2" cy="334.9" r="6.4"/>
+	</g>
+</g>
+</svg>

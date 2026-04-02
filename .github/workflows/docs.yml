@@ -37,7 +37,12 @@ jobs:
           "$(go env GOPATH)/bin/minimaldoc" build ./docs \
             --base-url "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}" \
             --output dist
-          python3 ./scripts/postprocess_landing.py dist/index.html
+          mkdir -p dist/brand
+          cp docs/brand/* dist/brand/
+          mkdir -p dist/img
+          cp docs/img/* dist/img/
+          cp docs/site.webmanifest dist/site.webmanifest
+          python3 ./scripts/postprocess_landing.py dist
           cp dist/index.html dist/404.html
 
       - name: Upload artifact

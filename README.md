@@ -21,9 +21,11 @@ For local editing, update the source files in [`docs/`](docs/), especially:
 - [`docs/overview.md`](docs/overview.md)
 - [`docs/components.md`](docs/components.md)
 - [`docs/resources.md`](docs/resources.md)
-- [`docs/publication.md`](docs/publication.md)
+- [`docs/publications.md`](docs/publications.md)
 - [`docs/privacy.md`](docs/privacy.md)
 - [`docs/TOC.md`](docs/TOC.md)
+- [`docs/brand/`](docs/brand) for site logo and favicon assets
+- [`docs/site.webmanifest`](docs/site.webmanifest) for the web app/browser icon manifest
 - [`scripts/postprocess_landing.py`](scripts/postprocess_landing.py) for the homepage section reorder used to keep the landing-page tiles and the preferred section flow
 
 The GitHub Pages deployment workflow is defined in [`.github/workflows/docs.yml`](.github/workflows/docs.yml).
@@ -105,6 +107,7 @@ make clean-all
 - Local build output is written to `.build/site`.
 - The local MinimalDoc binary is stored in `.tools/bin/minimaldoc`.
 - The build pipeline applies a small post-processing step to `index.html` so the landing page can keep the ecosystem tile grid while still placing it below `What is CARWatch`.
+- Brand assets from `docs/brand/` and `docs/site.webmanifest` are copied into the built site during local and CI builds.
 - If `.tools/bin/minimaldoc` is missing, `make`, `make build`, `make serve`, and `make view` will install it automatically when Go is available.
 - The first local install may take a moment because Go downloads the MinimalDoc module and its dependencies.
 - If you are offline and do not already have a working `minimaldoc` binary, local installation will fail.

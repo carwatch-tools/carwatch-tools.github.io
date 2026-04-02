@@ -1,39 +1,48 @@
 ---
 title: Components
-description: Description of the main parts of the CARWatch framework.
+description: Overview of the main software components of the CARWatch framework.
 menu_title: Components
-menu_order: 3
+menu_order: 2
 full_width: true
 ---
 
 # Components
 
-## Mobile Apps
+This page summarizes the main software components of the CARWatch framework. The sections below can be expanded with platform-specific details later.
 
-The mobile applications are used during data collection. They support reminder-based sampling workflows, barcode-based recording of sample events, and study setup through QR codes generated in advance. This allows study parameters to be prepared centrally and transferred to participants with minimal manual setup.
+## Android
 
-The Android version is already part of the CARWatch ecosystem. An iOS version is under development.
+The Android application is the current production app within the CARWatch ecosystem.
 
-## Web Interface
+It supports the mobile part of the sampling workflow, including reminders, awakening reports, barcode-based recording of sample events, and QR-code-based study setup.
 
-The web interface supports study preparation and data processing. Researchers can use it to define study parameters such as:
+Further platform-specific information can be added here later, for example:
 
-- number of sampling days
-- number of samples per day
-- sampling schedules
-- study-specific configuration settings
+- installation and distribution
+- supported features
+- screenshots or usage notes
+- repository and release information
 
-The same interface can also be used to process exported CARWatch log files after data collection. This supports a single workflow from study preparation to structured output.
+## iOS
 
-## Study Materials
+The iOS application extends the same general workflow to Apple devices.
 
-CARWatch supports generation of barcodes for saliva sampling tubes and QR codes for app setup.
+This section can later be used to describe:
 
-- Barcodes can encode study-specific information such as participant identifiers, study days, or sample numbers.
-- QR codes can encode the study configuration and application behavior so that participants can initialize the mobile app with predefined settings.
+- current development status
+- planned feature parity with Android
+- installation or TestFlight details
+- repository and release information
 
-## Log Processing
+## Web Configurator
 
-After data collection, CARWatch log files can be processed into structured datasets containing relevant timing information, including awakening and saliva sampling times where available. This helps turn raw event logs into data that can be used more directly in downstream analyses.
+The web configurator covers study preparation and post-study log processing.
 
-In the web interface, this processing can be performed client-side in the browser, so exported study data does not need to be uploaded to an external server for these steps.
+It can be used to:
+
+- define study parameters
+- generate barcodes and QR codes
+- prepare study materials
+- process exported CARWatch log files
+
+In its current form, this part of the workflow can remain client-side in the browser, so exported study data does not need to be uploaded to external servers for these steps.

@@ -37,5 +37,5 @@ Researchers can use CARWatch to:
 - [Overview](/overview/)
 - [Components](/components/)
 - [Resources](/resources/)
-- [Publication](/publication/)
+- [Publications](/publications/)
 - [Privacy policy](/privacy/)

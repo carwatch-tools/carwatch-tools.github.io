@@ -2,7 +2,7 @@
 title: Overview
 description: Background and general purpose of the CARWatch framework.
 menu_title: Overview
-menu_order: 2
+menu_order: 1
 full_width: true
 ---
 

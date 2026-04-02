@@ -38,7 +38,12 @@ install:
 
 build: $(MINIMALDOC)
 	$(MINIMALDOC) build $(DOCS_DIR) --base-url $(BASE_URL) --output $(DIST_DIR)
-	python3 ./scripts/postprocess_landing.py $(DIST_DIR)/index.html
+	mkdir -p $(DIST_DIR)/brand
+	cp docs/brand/* $(DIST_DIR)/brand/
+	mkdir -p $(DIST_DIR)/img
+	cp docs/img/* $(DIST_DIR)/img/
+	cp docs/site.webmanifest $(DIST_DIR)/site.webmanifest
+	python3 ./scripts/postprocess_landing.py $(DIST_DIR)
 
 serve: build
 	cd $(DIST_DIR) && python3 -m http.server $(PORT)

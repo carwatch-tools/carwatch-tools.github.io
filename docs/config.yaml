@@ -19,26 +19,22 @@ landing:
   enabled: true
   nav:
     - text: Overview
-      url: /overview/
+      url: /
     - text: Components
       url: /components/
-    - text: Resources
-      url: /resources/
-    - text: Publication
-      url: /publication/
-    - text: News
-      url: /news/
+    - text: Publications
+      url: /publications/
     - text: Privacy
       url: /privacy/
   hero:
     title: "CARWatch"
     subtitle: "An open-source framework for improving objective saliva sampling in the field."
     buttons:
-      - text: "Project Overview"
-        url: /overview/
+      - text: "Components"
+        url: /components/
         primary: true
-      - text: "Resources"
-        url: /resources/
+      - text: "Publications"
+        url: /publications/
         primary: false
   features:
     title: "The CARWatch Framework Ecosystem"
@@ -62,43 +58,77 @@ landing:
       # - emoji: "📊"
       #   title: "Structured output"
       #   description: "Exported CARWatch logs can be transformed into structured datasets for downstream analyses."
+  workflow:
+    intro_text: "The typical workflow of using <strong>CARWatch</strong> is the following:"
+    steps:
+      - title: "Configure the study"
+        text: "Define the study settings in the web configurator."
+      - title: "Prepare study materials"
+        text: "Generate barcodes and QR codes and distribute them to the participants along with all other study materials."
+      - title: "Download and initialize the app"
+        text: "Study participants download the smartphone app and configure it by scanning the QR code."
+      - title: "Use the app"
+        text: "Study participants use the app during data collection to report awakening and record saliva sample intake."
+      - title: "Share and process the exported logs"
+        text: "After the study, participants share log files with the study personnel. Afterwards, the log files can be processed locally in the web configurator without storing any data on servers!"
+    image:
+      src: "/img/carwatch_overview.png"
+      alt: "Overview of the CARWatch workflow from study preparation to data processing"
+      max_width: "760px"
+  contact:
+    title: "Contact"
+    text: "Interested in using CARWatch in your own study or research project? Contact us at"
+    email: "robert.richer@fau.de"
   text_blocks:
     - id: "what-is-carwatch"
-      title: "What is CARWatch"
-      content: "<p>CARWatch is an open-source framework for saliva sampling studies in real-world settings. It combines mobile applications for Android and iOS used during data collection with a website for study preparation, barcode and QR-code generation, and processing of exported log files.</p><p>The framework was originally developed as a single Android app for cortisol awakening response research and has since expanded into a broader cross-platform workflow for all kinds of studies where saliva samples are collected in the field.</p>"
+      title: "What is CARWatch?"
+      content: "<p><strong>CARWatch</strong> is an open-source framework for supporting <strong>saliva sampling field studies</strong>. It combines mobile applications for <strong>Android</strong> and <strong>iOS</strong> used during data collection with a <strong>study configurator website</strong>.</p><p>The framework was originally developed as a single Android app for <strong>cortisol awakening response (CAR)</strong> research and has since been expanded into a broader <strong>cross-platform ecosystem</strong> for studies in which saliva samples are collected in the field.</p>"
       alignment: "left"
       max_width: "900px"
       order: 1
     - id: "why-carwatch"
-      title: "Why CARWatch"
-      content: "<p>The cortisol awakening response is a widely used marker in psychoneuroendocrine research, but its assessment is highly time-critical. Even short delays between awakening and sampling can systematically distort CAR estimates and contribute to inconsistent findings in field studies.</p><p>CARWatch was developed to support more objective recording of sample events outside the lab. Barcode scans document sample events with timestamps, automated reminders support protocol adherence, and QR codes transfer predefined study settings to the app.</p>"
+      title: "Why CARWatch?"
+      content: "<p>The <strong>cortisol awakening response</strong> is a widely used marker in psychoneuroendocrine research, but its assessment is <strong>highly time-critical</strong>. Even short delays between awakening and sampling can systematically distort <strong>CAR estimates</strong> and contribute to inconsistent findings in field studies.</p><p>CARWatch was developed to support <strong>more objective recording</strong> of sample events outside the lab. <strong>Barcode scans</strong> document sample events with timestamps, <strong>automated reminders</strong> support protocol adherence, and <strong>QR codes</strong> transfer predefined study settings to the app.</p>"
       alignment: "left"
       max_width: "900px"
       order: 2
     - id: "workflow"
       title: "Workflow"
-      content: "<p>Researchers can configure a study, generate labeled sampling materials, initialize the mobile app through QR codes, document sample events during data collection, and process exported log files after the study. In the web interface, these processing steps can remain client-side in the browser.</p><p><img src=\"/img/carwarch_overview.png\" alt=\"Overview of the CARWatch workflow from study preparation to data processing\"></p>"
-      alignment: "left"
-      max_width: "1000px"
-      order: 3
-    - id: "where-next"
-      title: "Where to Go Next"
-      content: "<ul><li><a href=\"/resources/\">Resources</a> for links to the web configurator, Android app, iOS app, publication, and repository.</li><li><a href=\"/overview/\">Overview</a> for the conceptual background and methodological motivation.</li><li><a href=\"/components/\">Components</a> for the role of the mobile apps, web tools, study materials, and log processing.</li><li><a href=\"/publication/\">Publication</a> for the primary paper and scientific context.</li></ul>"
+      content: ""
       alignment: "left"
       max_width: "900px"
+      order: 3
+  links_grid:
+    - id: "further-information"
+      title: "Further Information"
+      description: "Selected entry points for publications, applications of CARWatch, and project resources."
+      columns: 3
+      items:
+        - icon: "📄"
+          title: "Original Publication"
+          description: "Read the primary 2023 CARWatch paper and citation information."
+          url: /publications/#original-publication
+        - icon: "🧪"
+          title: "Further Publications"
+          description: "Placeholder for studies and publications that used CARWatch."
+          url: /publications/#further-publications
+        - icon: "🔗"
+          title: "Resources"
+          description: "Find the web configurator, app links, repository references, and related resources."
+          url: /resources/
       order: 4
 
 footer:
-  copyright: "CARWatch project"
+  copyright: "© Copyright 2026, Robert Richer, Friedrich-Alexander-Universität Erlangen-Nürnberg (FAU)."
   links:
     - title: Project
       items:
-        - text: Home
+        - text: Overview
           url: /
-        - text: Resources
-          url: /resources/
-        - text: Publication
-          url: /publication/
+        - text: Components
+          url: /components/
+        - text: Publications
+          url: /publications/
     - title: Policies
       items:
         - text: Privacy

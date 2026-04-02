@@ -1,12 +1,14 @@
 ---
-title: Publication
+title: Publications
 description: Scientific background and citation information for CARWatch.
-menu_title: Publication
-menu_order: 5
+menu_title: Publications
+menu_order: 3
 full_width: true
 ---
 
-# Publication
+# Publications
+
+## Original Publication
 
 CARWatch was introduced in the following publication:
 
@@ -24,8 +26,10 @@ The publication presents CARWatch as a tool for supporting more objective assess
 
 In the original validation work, CARWatch improved the temporal precision of sampling and supported more reliable field-based CAR assessment.
 
-## Further References
+## Further Publications
 
 A later commentary describing the development of CARWatch into a broader framework can be linked here once the final reference is available.
+
+This section can also be used to list future publications that applied CARWatch in empirical studies.
 
 - Updated commentary: link to be added

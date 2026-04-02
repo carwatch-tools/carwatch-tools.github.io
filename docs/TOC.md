@@ -1,9 +1,6 @@
 # CARWatch
 
-- [Home](index.md)
-- [Overview](overview.md)
+- [Overview](index.md)
 - [Components](components.md)
-- [Resources](resources.md)
-- [Publication](publication.md)
-- [News](news.md)
+- [Publications](publications.md)
 - [Privacy](privacy.md)
