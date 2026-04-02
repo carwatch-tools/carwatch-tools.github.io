@@ -30,12 +30,11 @@ Researchers can use CARWatch to:
 4. collect objective sampling timestamps through the mobile app
 5. process exported log files after the study
 
-![Overview of the CARWatch workflow from study preparation to data processing](img/carwarch_overview.png)
+![Overview of the CARWatch workflow from study preparation to data processing](img/carwatch_overview.png)
 
 ## Further Information
 
 - [Overview](/overview/)
 - [Components](/components/)
-- [Resources](/resources/)
 - [Publications](/publications/)
 - [Privacy policy](/privacy/)

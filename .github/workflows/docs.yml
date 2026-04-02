@@ -34,14 +34,15 @@ jobs:
 
       - name: Build Documentation
         run: |
-          "$(go env GOPATH)/bin/minimaldoc" build ./docs \
+          python3 ./scripts/prepare_build_docs.py ./docs ./build-docs
+          "$(go env GOPATH)/bin/minimaldoc" build ./build-docs \
             --base-url "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}" \
             --output dist
           mkdir -p dist/brand
-          cp docs/brand/* dist/brand/
+          cp build-docs/brand/* dist/brand/
           mkdir -p dist/img
-          cp docs/img/* dist/img/
-          cp docs/site.webmanifest dist/site.webmanifest
+          cp build-docs/img/* dist/img/
+          cp build-docs/site.webmanifest dist/site.webmanifest
           python3 ./scripts/postprocess_landing.py dist
           cp dist/index.html dist/404.html
 

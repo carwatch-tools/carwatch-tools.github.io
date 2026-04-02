@@ -5,6 +5,7 @@ TOOLS_DIR := ./.tools
 BIN_DIR := $(TOOLS_DIR)/bin
 MINIMALDOC := $(BIN_DIR)/minimaldoc
 DOCS_DIR := ./docs
+BUILD_DOCS_DIR := ./.build/docs
 DIST_DIR := ./.build/site
 PORT ?= 4173
 BASE_URL ?= http://localhost:$(PORT)
@@ -37,12 +38,13 @@ install:
 	@echo "Installed MinimalDoc to $(MINIMALDOC)"
 
 build: $(MINIMALDOC)
-	$(MINIMALDOC) build $(DOCS_DIR) --base-url $(BASE_URL) --output $(DIST_DIR)
+	python3 ./scripts/prepare_build_docs.py $(DOCS_DIR) $(BUILD_DOCS_DIR)
+	$(MINIMALDOC) build $(BUILD_DOCS_DIR) --base-url $(BASE_URL) --output $(DIST_DIR)
 	mkdir -p $(DIST_DIR)/brand
-	cp docs/brand/* $(DIST_DIR)/brand/
+	cp $(BUILD_DOCS_DIR)/brand/* $(DIST_DIR)/brand/
 	mkdir -p $(DIST_DIR)/img
-	cp docs/img/* $(DIST_DIR)/img/
-	cp docs/site.webmanifest $(DIST_DIR)/site.webmanifest
+	cp $(BUILD_DOCS_DIR)/img/* $(DIST_DIR)/img/
+	cp $(BUILD_DOCS_DIR)/site.webmanifest $(DIST_DIR)/site.webmanifest
 	python3 ./scripts/postprocess_landing.py $(DIST_DIR)
 
 serve: build
@@ -72,4 +74,5 @@ doctor:
 	@echo "Go: $$(command -v go || echo missing)"
 	@echo "MinimalDoc in repo: $$(test -x $(MINIMALDOC) && echo $(MINIMALDOC) || echo missing)"
 	@echo "Docs source: $(DOCS_DIR)"
+	@echo "Prepared docs: $(BUILD_DOCS_DIR)"
 	@echo "Build output: $(DIST_DIR)"

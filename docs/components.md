@@ -8,9 +8,7 @@ full_width: true
 
 # Components
 
-This page summarizes the main software components of the CARWatch framework. The sections below can be expanded with platform-specific details later.
-
-## Android
+## Android App
 
 The Android application is the current production app within the CARWatch ecosystem.
 
@@ -23,7 +21,7 @@ Further platform-specific information can be added here later, for example:
 - screenshots or usage notes
 - repository and release information
 
-## iOS
+## iOS App
 
 The iOS application extends the same general workflow to Apple devices.
 
@@ -45,4 +43,4 @@ It can be used to:
 - prepare study materials
 - process exported CARWatch log files
 
-In its current form, this part of the workflow can remain client-side in the browser, so exported study data does not need to be uploaded to external servers for these steps.
+This part of the workflow remains completely client-side in the browser, so any exported study data does is not uploaded to external servers for processing.
