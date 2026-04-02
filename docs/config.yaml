@@ -42,29 +42,36 @@ landing:
         primary: false
   features:
     title: "The CARWatch Framework Ecosystem"
+    intro_text: "The CARWatch ecosystem consists of the following components:"
     items:
-      - emoji: "📱"
-        title: "Mobile apps"
-        description: "Applications for reminders, barcode-based recording of sample events, and QR-code-based study setup."
+      - emoji: "🤖"
+        title: "Android App"
+        description: "The current smartphone app for reminders, awakening reports, and barcode-based recording of sampling events."
+        url: /resources/#android
+      - emoji: "🍎"
+        title: "iOS App"
+        description: "An iOS version is under development to extend the same workflow to Apple devices."
+        url: /resources/#ios
       - emoji: "🌐"
-        title: "Web tools"
-        description: "Browser-based study configuration, barcode and QR-code generation, and processing of exported log files."
-      - emoji: "🏷️"
-        title: "Study materials"
-        description: "Barcodes and QR codes can be prepared in advance and distributed with sampling materials."
-      - emoji: "📊"
-        title: "Structured output"
-        description: "Exported CARWatch logs can be transformed into structured datasets for downstream analyses."
+        title: "Web Configurator"
+        description: "Browser-based study configuration, generation of study materials, and processing of exported log files."
+        url: /resources/#web-configurator
+      # - emoji: "🏷️"
+      #   title: "Study materials"
+      #   description: "Barcodes and QR codes can be prepared in advance and distributed with sampling materials."
+      # - emoji: "📊"
+      #   title: "Structured output"
+      #   description: "Exported CARWatch logs can be transformed into structured datasets for downstream analyses."
   text_blocks:
-    - id: "why-carwatch"
-      title: "Why CARWatch"
-      content: "<p>The cortisol awakening response is a widely used marker in psychoneuroendocrine research, but its assessment is highly time-critical. Even short delays between awakening and sampling can systematically distort CAR estimates and contribute to inconsistent findings in field studies.</p><p>CARWatch was developed to support more objective recording of sample events outside the lab. Barcode scans document sample events with timestamps, automated reminders support protocol adherence, and QR codes transfer predefined study settings to the app.</p>"
-      alignment: "left"
-      max_width: "900px"
-      order: 1
     - id: "what-is-carwatch"
       title: "What is CARWatch"
       content: "<p>CARWatch is an open-source framework for saliva sampling studies in real-world settings. It combines mobile applications for Android and iOS used during data collection with a website for study preparation, barcode and QR-code generation, and processing of exported log files.</p><p>The framework was originally developed as a single Android app for cortisol awakening response research and has since expanded into a broader cross-platform workflow for all kinds of studies where saliva samples are collected in the field.</p>"
+      alignment: "left"
+      max_width: "900px"
+      order: 1
+    - id: "why-carwatch"
+      title: "Why CARWatch"
+      content: "<p>The cortisol awakening response is a widely used marker in psychoneuroendocrine research, but its assessment is highly time-critical. Even short delays between awakening and sampling can systematically distort CAR estimates and contribute to inconsistent findings in field studies.</p><p>CARWatch was developed to support more objective recording of sample events outside the lab. Barcode scans document sample events with timestamps, automated reminders support protocol adherence, and QR codes transfer predefined study settings to the app.</p>"
       alignment: "left"
       max_width: "900px"
       order: 2
