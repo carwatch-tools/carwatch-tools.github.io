@@ -20,7 +20,9 @@ If you use CARWatch in your work, please cite the publication above and report t
 
 ## Scientific Context
 
-The publication presents CARWatch as a tool for supporting more objective assessment of cortisol awakening response sampling in real-world settings.
+The publication presents CARWatch as a tool for supporting more objective assessment of cortisol awakening response sampling in real-world settings. The methodological motivation is straightforward: CAR estimates are highly sensitive to sampling delays, and insufficient temporal verification is a major challenge in unsupervised field studies.
+
+In the original validation work, CARWatch improved the temporal precision of sampling and supported more reliable field-based CAR assessment.
 
 ## Further References
 

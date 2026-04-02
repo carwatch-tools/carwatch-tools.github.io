@@ -64,13 +64,13 @@ landing:
       order: 1
     - id: "what-is-carwatch"
       title: "What is CARWatch"
-      content: "<p>CARWatch is an open-source framework for saliva sampling studies. It combines mobile applications used during data collection with web-based tools for study preparation, barcode and QR-code generation, and processing of exported log files.</p><p>It was originally developed for cortisol awakening response research, but the framework can also support broader saliva sampling protocols in field settings.</p>"
+      content: "<p>CARWatch is an open-source framework for saliva sampling studies in real-world settings. It combines mobile applications for Android and iOS used during data collection with a website for study preparation, barcode and QR-code generation, and processing of exported log files.</p><p>The framework was originally developed as a single Android app for cortisol awakening response research and has since expanded into a broader cross-platform workflow for all kinds of studies where saliva samples are collected in the field.</p>"
       alignment: "left"
       max_width: "900px"
       order: 2
     - id: "workflow"
       title: "Workflow"
-      content: "<p>Researchers can configure a study, generate barcodes and QR codes, distribute study materials, collect objective sampling timestamps through the mobile app, and process exported log files after the study. In the web interface, log processing can remain client-side in the browser.</p><p><img src=\"/img/carwarch_overview.png\" alt=\"Overview of the CARWatch workflow from study preparation to data processing\"></p>"
+      content: "<p>Researchers can configure a study, generate labeled sampling materials, initialize the mobile app through QR codes, document sample events during data collection, and process exported log files after the study. In the web interface, these processing steps can remain client-side in the browser.</p><p><img src=\"/img/carwarch_overview.png\" alt=\"Overview of the CARWatch workflow from study preparation to data processing\"></p>"
       alignment: "left"
       max_width: "1000px"
       order: 3
