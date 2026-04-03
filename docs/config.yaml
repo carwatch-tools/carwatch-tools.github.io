@@ -10,6 +10,19 @@ enable_llms: true
 enable_search: false
 clean_urls: true
 
+branding:
+  colors:
+    light:
+      primary: "#2F586E"
+      secondary: "#8C9FB1"
+      primary_alpha: "rgba(4,49,106,0.14)"
+      secondary_alpha: "rgba(140,159,177,0.16)"
+    dark:
+      primary: "#8C9FB1"
+      secondary: "#2F586E"
+      primary_alpha: "rgba(140,159,177,0.18)"
+      secondary_alpha: "rgba(140,159,177,0.12)"
+
 stale_warning:
   enabled: false
   threshold_days: 365
@@ -40,15 +53,15 @@ landing:
     title: "The CARWatch Framework Ecosystem"
     intro_text: "The CARWatch ecosystem consists of the following components:"
     items:
-      - emoji: "🤖"
+      - icon_src: "/brand/android.svg"
         title: "Android App"
         description: "The current smartphone app for reminders, awakening reports, and barcode-based recording of sampling events."
         url: /components/#android-app
-      - emoji: "🍎"
+      - icon_src: "/brand/apple.svg"
         title: "iOS App"
         description: "An iOS version is under development to extend the same workflow to Apple devices."
         url: /components/#ios-app
-      - emoji: "🌐"
+      - icon_src: "/brand/globe.svg"
         title: "Web Configurator"
         description: "Browser-based study configuration, generation of study materials, and processing of exported log files."
         url: /components/#web-configurator

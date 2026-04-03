@@ -57,8 +57,36 @@ def render_content_header(nav_items: list[dict], base_path: str) -> str:
     )
 
 
-def inject_brand_assets(html: str) -> str:
+def resolve_theme_colors(site_config: dict) -> dict[str, dict[str, str]]:
+    branding = site_config.get("branding", {}) if isinstance(site_config, dict) else {}
+    colors = branding.get("colors", {}) if isinstance(branding, dict) else {}
+    required_modes = ("light", "dark")
+    required_keys = ("primary", "secondary", "primary_alpha", "secondary_alpha")
+
+    if not isinstance(colors, dict):
+        raise ValueError("Missing required 'branding.colors' configuration in docs/config.yaml")
+
+    resolved: dict[str, dict[str, str]] = {}
+    for mode in required_modes:
+        mode_values = colors.get(mode, {})
+        if not isinstance(mode_values, dict):
+            raise ValueError(f"Missing required 'branding.colors.{mode}' configuration in docs/config.yaml")
+
+        missing = [key for key in required_keys if key not in mode_values]
+        if missing:
+            missing_str = ", ".join(f"branding.colors.{mode}.{key}" for key in missing)
+            raise ValueError(f"Missing required theme color settings in docs/config.yaml: {missing_str}")
+
+        resolved[mode] = {key: str(mode_values[key]) for key in required_keys}
+
+    return resolved
+
+
+def inject_brand_assets(html: str, site_config: dict | None = None) -> str:
     base_path = get_base_path(html)
+    theme_colors = resolve_theme_colors(site_config or {})
+    light = theme_colors["light"]
+    dark = theme_colors["dark"]
 
     favicon_markup = f"""
 <link rel="icon" type="image/x-icon" href="{base_path}/brand/favicon.ico">
@@ -70,24 +98,24 @@ def inject_brand_assets(html: str) -> str:
 <style>
 :root,
 :root[data-theme="light"]{{
---link-color:#04316A;
---link-hover:#04316A;
---accent-primary:#04316A;
---accent-hover:#8C9FB1;
---accent-color:#04316A;
---accent-color-alpha:rgba(4,49,106,0.14);
---border-secondary:#8C9FB1;
---bg-hover:rgba(140,159,177,0.16);
+--link-color:{light["primary"]};
+--link-hover:{light["primary"]};
+--accent-primary:{light["primary"]};
+--accent-hover:{light["secondary"]};
+--accent-color:{light["primary"]};
+--accent-color-alpha:{light["primary_alpha"]};
+--border-secondary:{light["secondary"]};
+--bg-hover:{light["secondary_alpha"]};
 }}
 :root[data-theme="dark"]{{
---link-color:#8C9FB1;
---link-hover:#8C9FB1;
---accent-primary:#8C9FB1;
---accent-hover:#04316A;
---accent-color:#8C9FB1;
---accent-color-alpha:rgba(140,159,177,0.18);
---border-secondary:#8C9FB1;
---bg-hover:rgba(140,159,177,0.12);
+--link-color:{dark["primary"]};
+--link-hover:{dark["primary"]};
+--accent-primary:{dark["primary"]};
+--accent-hover:{dark["secondary"]};
+--accent-color:{dark["primary"]};
+--accent-color-alpha:{dark["primary_alpha"]};
+--border-secondary:{dark["primary"]};
+--bg-hover:{dark["secondary_alpha"]};
 }}
 .brand-link{{display:inline-flex;align-items:center;gap:.55rem;color:inherit;text-decoration:none}}
 .brand-mark{{width:1.5rem;height:1.5rem;display:block;flex:none}}
@@ -107,6 +135,10 @@ def inject_brand_assets(html: str) -> str:
 .markdown-body h3{{color:var(--accent-primary)}}
 .hero-title.brand-title{{display:inline-flex;align-items:center;gap:1rem}}
 .hero-title .brand-mark{{width:5rem;height:5rem}}
+.features-section .feature-emoji{{display:flex;align-items:center;justify-content:flex-start;color:var(--accent-primary);margin-bottom:1rem;line-height:1}}
+.feature-icon-wrap{{display:flex;align-items:center;justify-content:flex-start}}
+.feature-icon-img{{width:2rem;height:2rem;display:block}}
+.feature-icon-wrap svg{{width:2rem;height:2rem;display:block}}
 .workflow-steps{{display:grid;gap:1rem;margin-top:1.25rem}}
 .workflow-step{{display:grid;grid-template-columns:2.25rem 1fr;gap:1rem;align-items:start;padding:1rem 1.1rem;border:1px solid var(--border-primary);border-radius:.9rem;background:var(--bg-secondary)}}
 .workflow-step-number{{display:inline-flex;align-items:center;justify-content:center;width:2.25rem;height:2.25rem;border-radius:999px;background:var(--accent-primary);color:var(--bg-primary);font-weight:700;line-height:1}}

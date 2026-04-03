@@ -2,11 +2,13 @@ from __future__ import annotations
 
 import re
 from html import escape
+from pathlib import Path
 
 from postprocess_shared import get_base_path, render_contact_html
 
 
 SECTION_RE = re.compile(r"<section class=\"([^\"]+)\">.*?</section>", re.DOTALL)
+REPO_ROOT = Path(__file__).resolve().parent.parent
 
 
 def find_section(html: str, class_name: str, heading: str | None = None) -> tuple[int, int, str] | None:
@@ -139,6 +141,56 @@ def link_feature_tiles(html: str, items: list[dict]) -> str:
     return html[:start] + updated + html[end:]
 
 
+def replace_feature_icons(html: str, items: list[dict]) -> str:
+    features = find_section(html, "features-section", "The CARWatch Framework Ecosystem")
+    if not features:
+        return html
+
+    icon_map: dict[str, tuple[str, str]] = {}
+    for item in items:
+        if not isinstance(item, dict):
+            continue
+        title = item.get("title")
+        icon_src = item.get("icon_src")
+        if not title or not icon_src:
+            continue
+        src = str(icon_src)
+        icon_map[str(title)] = (
+            re.escape(str(title)),
+            src,
+        )
+
+    start, end, block = features
+    updated = block
+    for title, (title_pattern, icon_src) in icon_map.items():
+        icon_markup = render_feature_icon_markup(icon_src)
+        if not icon_markup:
+            continue
+        updated = re.sub(
+            rf'((?:<div class="feature-emoji">.*?</div>\s*)?)(<h3 class="feature-title">{title_pattern}</h3>)',
+            rf'{icon_markup}\n\2',
+            updated,
+            count=1,
+            flags=re.DOTALL,
+        )
+    return html[:start] + updated + html[end:]
+
+
+def render_feature_icon_markup(icon_src: str) -> str:
+    if icon_src.startswith("/"):
+        asset_path = REPO_ROOT / "docs" / icon_src.lstrip("/")
+    else:
+        asset_path = REPO_ROOT / "docs" / icon_src
+
+    if asset_path.suffix.lower() == ".svg" and asset_path.exists():
+        svg = asset_path.read_text(encoding="utf-8").strip()
+        svg = re.sub(r"<\?xml.*?\?>", "", svg, flags=re.DOTALL).strip()
+        return f'<div class="feature-emoji feature-icon-wrap">{svg}</div>'
+
+    escaped_src = escape(icon_src)
+    return f'<div class="feature-emoji feature-icon-wrap"><img src="{escaped_src}" alt="" class="feature-icon-img"></div>'
+
+
 def replace_workflow_block(html: str, workflow_config: dict) -> str:
     section = find_section(html, "text-section", "Workflow")
     if not section:
@@ -185,6 +237,7 @@ def process_homepage(
     html = reorder_landing_sections(html)
     html = add_features_intro(html, str(features_config.get("intro_text", "")))
     html = link_feature_tiles(html, features_config.get("items", []))
+    html = replace_feature_icons(html, features_config.get("items", []))
     html = replace_workflow_block(html, workflow_config)
     html = append_contact_section(html, contact_config)
     return html

@@ -15,21 +15,21 @@ from postprocess_shared import (
 )
 
 
-def load_landing_config() -> dict:
+def load_site_config() -> dict:
     config_path = Path(__file__).resolve().parent.parent / "docs" / "config.yaml"
     with config_path.open("r", encoding="utf-8") as fh:
-        config = yaml.safe_load(fh) or {}
-    return config.get("landing", {})
+        return yaml.safe_load(fh) or {}
 
 
-def process_html(target: Path, site_root: Path, landing_config: dict) -> None:
+def process_html(target: Path, site_root: Path, site_config: dict) -> None:
     html = target.read_text(encoding="utf-8")
+    landing_config = site_config.get("landing", {}) if isinstance(site_config, dict) else {}
     nav_items = landing_config.get("nav", []) if isinstance(landing_config, dict) else []
     features_config = landing_config.get("features", {}) if isinstance(landing_config, dict) else {}
     workflow_config = landing_config.get("workflow", {}) if isinstance(landing_config, dict) else {}
     contact_config = landing_config.get("contact", {}) if isinstance(landing_config, dict) else {}
 
-    rewritten = inject_brand_assets(html)
+    rewritten = inject_brand_assets(html, site_config)
     rewritten = remove_contact_sections(rewritten)
 
     if target.resolve() == (site_root / "index.html").resolve():
@@ -50,14 +50,14 @@ def main() -> int:
         print("usage: postprocess_landing.py <site-dir-or-html-file>", file=sys.stderr)
         return 1
 
-    landing_config = load_landing_config()
+    site_config = load_site_config()
     target = Path(sys.argv[1])
     if target.is_dir():
         site_root = target.resolve()
         for html_file in sorted(target.rglob("*.html")):
-            process_html(html_file, site_root, landing_config)
+            process_html(html_file, site_root, site_config)
     else:
-        process_html(target, target.resolve().parent, landing_config)
+        process_html(target, target.resolve().parent, site_config)
     return 0
 
 
