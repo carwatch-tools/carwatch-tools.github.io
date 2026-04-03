@@ -55,8 +55,8 @@ landing:
     items:
       - icon_src: "/brand/android.svg"
         title: "Android App"
-        description: "The current smartphone app for reminders, awakening reports, and barcode-based recording of sampling events."
-        url: /components/#android-app
+        description: "The current smartphone app for reminders, awakening reports, and barcode-based recording of sampling events. Available on Google Play."
+        url: https://play.google.com/store/apps/details?id=de.fau.cs.mad.carwatch
       - icon_src: "/brand/apple.svg"
         title: "iOS App"
         description: "An iOS version is under development to extend the same workflow to Apple devices."
@@ -79,7 +79,7 @@ landing:
       - title: "Prepare study materials"
         text: "Generate barcodes and QR codes and distribute them to the participants along with all other study materials."
       - title: "Download and initialize the app"
-        text: "Study participants download the smartphone app and configure it by scanning the QR code."
+        text: "Study participants download the Android app from Google Play and configure it by scanning the QR code."
       - title: "Use the app"
         text: "Study participants use the app during data collection to report awakening and record saliva sample intake."
       - title: "Share and process the exported logs"

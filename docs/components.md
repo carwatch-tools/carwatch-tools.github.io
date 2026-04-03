@@ -14,6 +14,10 @@ The Android application is the current production app within the CARWatch ecosys
 
 It supports the mobile part of the sampling workflow, including reminders, awakening reports, barcode-based recording of sample events, and QR-code-based study setup.
 
+The current public Android release is available on Google Play:
+
+<https://play.google.com/store/apps/details?id=de.fau.cs.mad.carwatch>
+
 Further platform-specific information can be added here later, for example:
 
 - installation and distribution
