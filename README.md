@@ -14,7 +14,7 @@ MinimalDoc also generates `llms.txt` and related machine-readable companion file
 
 Once GitHub Pages is enabled to use GitHub Actions, the public site will be available at:
 
-`https://mad-lab-fau.github.io/carwatch/`
+`https://carwatch-tools.github.io/carwatch/`
 
 For local editing, update the source files in [`docs/`](docs/), especially:
 
