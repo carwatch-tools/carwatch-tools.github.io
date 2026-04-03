@@ -1,6 +1,6 @@
 ---
 title: Privacy Policy
-description: Privacy information for the CARWatch apps, website, and web configurator.
+description: Privacy information for the CARWatch apps, website, and Study Manager.
 menu_title: Privacy
 menu_order: 4
 full_width: true
@@ -10,7 +10,7 @@ full_width: true
 
 Effective date: 1 April 2026
 
-This privacy policy describes how privacy-relevant data is handled in connection with the CARWatch software framework, including the Android app, the iOS app, the project website, and the web configurator.
+This privacy policy describes how privacy-relevant data is handled in connection with the CARWatch software framework, including the Android app, the iOS app, the project website, and the Study Manager.
 
 This policy is intended to provide the public privacy-policy URL required for app-store distribution. It covers the CARWatch software and project pages themselves. It does **not** replace the study-specific privacy information that must be provided by the research institution running a particular saliva sampling study.
 
@@ -31,7 +31,7 @@ This policy applies to:
 - the CARWatch Android app
 - the CARWatch iOS app
 - the CARWatch project website
-- the browser-based CARWatch web configurator
+- the browser-based CARWatch Study Manager
 
 This policy does **not** govern the independent research processing carried out by universities, clinics, laboratories, or other institutions that use CARWatch in their own studies. In such cases, the institution conducting the study is usually responsible for informing participants about the study-specific collection and use of their research data.
 
@@ -59,9 +59,9 @@ Depending on the study setup, the mobile apps may process the following categori
 
 The CARWatch apps are designed as research-support tools. Based on the documented standard workflow of this project, data is generally processed locally on the device first and is **not** uploaded any CARWatch-operated servers as part of the basic app workflow.
 
-## 5. Data Processed in the Web Configurator
+## 5. Data Processed in the Study Manager
 
-The CARWatch web configurator can be used to:
+The CARWatch Study Manager can be used to:
 
 - define study settings
 - generate barcodes and QR codes

@@ -36,9 +36,9 @@ This section can later be used to describe:
 - installation or TestFlight details
 - repository and release information
 
-## Web Configurator
+## Study Manager
 
-The web configurator covers study preparation and post-study log processing.
+The Study Manager is a web-based tool for study preparation and post-study log processing.
 
 It can be used to:
 

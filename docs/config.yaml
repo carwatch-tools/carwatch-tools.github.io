@@ -62,9 +62,9 @@ landing:
         description: "An iOS version is under development to extend the same workflow to Apple devices."
         url: /components/#ios-app
       - icon_src: "/brand/globe.svg"
-        title: "Web Configurator"
-        description: "Browser-based study configuration, generation of study materials, and processing of exported log files."
-        url: /components/#web-configurator
+        title: "Study Manager"
+        description: "A web-based study manager for study setup, generation of study materials, and processing of exported log files."
+        url: /components/#study-manager
       # - emoji: "🏷️"
       #   title: "Study materials"
       #   description: "Barcodes and QR codes can be prepared in advance and distributed with sampling materials."
@@ -75,7 +75,7 @@ landing:
     intro_text: "The typical workflow of using <strong>CARWatch</strong> is the following:"
     steps:
       - title: "Configure the study"
-        text: "Define the study settings in the web configurator."
+        text: "Define the study settings in the web-based Study Manager."
       - title: "Prepare study materials"
         text: "Generate barcodes and QR codes and distribute them to the participants along with all other study materials."
       - title: "Download and initialize the app"
@@ -83,7 +83,7 @@ landing:
       - title: "Use the app"
         text: "Study participants use the app during data collection to report awakening and record saliva sample intake."
       - title: "Share and process the exported logs"
-        text: "After the study, participants share log files with the study personnel. Afterwards, the log files can be processed locally in the web configurator without storing any data on servers!"
+        text: "After the study, participants share log files with the study personnel. Afterwards, the log files can be processed locally in the web-based Study Manager without storing any data on servers!"
     image:
       src: "/img/carwatch_overview.png"
       alt: "Overview of the CARWatch workflow from study preparation to data processing"
@@ -95,7 +95,7 @@ landing:
   text_blocks:
     - id: "what-is-carwatch"
       title: "What is CARWatch?"
-      content: "<p><strong>CARWatch</strong> is an open-source framework for supporting <strong>saliva sampling field studies</strong>. It combines mobile applications for <strong>Android</strong> and <strong>iOS</strong> used during data collection with a <strong>study configurator website</strong>.</p><p>The framework was originally developed as a single Android app for <strong>cortisol awakening response (CAR)</strong> research and has since been expanded into a broader <strong>cross-platform ecosystem</strong> for studies in which saliva samples are collected in the field.</p>"
+      content: "<p><strong>CARWatch</strong> is an open-source framework for supporting <strong>saliva sampling field studies</strong>. It combines mobile applications for <strong>Android</strong> and <strong>iOS</strong> used during data collection with a <strong>web-based Study Manager</strong>.</p><p>The framework was originally developed as a single Android app for <strong>cortisol awakening response (CAR)</strong> research and has since been expanded into a broader <strong>cross-platform ecosystem</strong> for studies in which saliva samples are collected in the field.</p>"
       alignment: "left"
       max_width: "900px"
       order: 1
@@ -127,7 +127,7 @@ landing:
           url: /publications/#publications-that-used-carwatch
         - icon: "🔗"
           title: "Components"
-          description: "Find the web configurator, app links, repository references, and related resources."
+          description: "Find the Study Manager, app links, repository references, and related resources."
           url: /components/
       order: 4
 
