@@ -1,2 +1,4 @@
 .build/
 .tools/
+__pycache__/
+*.pyc
