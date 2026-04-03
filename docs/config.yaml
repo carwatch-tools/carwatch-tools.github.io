@@ -63,8 +63,8 @@ landing:
         url: /components/#ios-app
       - icon_src: "/brand/globe.svg"
         title: "Study Manager"
-        description: "A web-based study manager for study setup, generation of study materials, and processing of exported log files."
-        url: /components/#study-manager
+        description: "A web-based study manager for study setup, generation of study materials, and processing of exported log files. Available online."
+        url: https://carwatch-tools.github.io/study-manager/
       # - emoji: "🏷️"
       #   title: "Study materials"
       #   description: "Barcodes and QR codes can be prepared in advance and distributed with sampling materials."

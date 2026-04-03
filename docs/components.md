@@ -40,6 +40,10 @@ This section can later be used to describe:
 
 The Study Manager is a web-based tool for study preparation and post-study log processing.
 
+The public Study Manager is available here:
+
+<https://carwatch-tools.github.io/study-manager/>
+
 It can be used to:
 
 - define study parameters
