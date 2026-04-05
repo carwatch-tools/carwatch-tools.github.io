@@ -2,7 +2,7 @@
 
 CARWatch is an open-source framework to support **objective** and **low-cost** assessment of cortisol samples in real-world, unsupervised environments. It is especially suitable for **cortisol awakening response (CAR)** research, but not limited to this application.
 
-For local authoring, the markdown files in [`docs/`](/Users/richer/Documents/PhD/Code_Repositories/HealthPsychology/CARWatch/carwatch/docs) remain normal UTF-8 source files. During the build, [`scripts/prepare_build_docs.py`](/Users/richer/Documents/PhD/Code_Repositories/HealthPsychology/CARWatch/carwatch/scripts/prepare_build_docs.py) creates a temporary normalized copy in `.build/docs` before MinimalDoc runs. This avoids a current MinimalDoc search-index issue with non-ASCII characters while keeping the editable source files clean.
+For local authoring, the markdown files in [`docs/`](docs/) remain normal UTF-8 source files. During the build, [`scripts/prepare_build_docs.py`](scripts/prepare_build_docs.py) creates a temporary normalized copy in `.build/docs` before MinimalDoc runs. This avoids a current MinimalDoc search-index issue with non-ASCII characters while keeping the editable source files clean.
 
 ## Project Website
 
