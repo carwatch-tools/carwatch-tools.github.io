@@ -18,23 +18,15 @@ The current public Android release is available on Google Play:
 
 <https://play.google.com/store/apps/details?id=de.fau.cs.mad.carwatch>
 
-Further platform-specific information can be added here later, for example:
+The Android app source code is available on GitHub:
 
-- installation and distribution
-- supported features
-- screenshots or usage notes
-- repository and release information
+<https://github.com/carwatch-tools/carwatch-android>
 
 ## iOS App
 
-The iOS application extends the same general workflow to Apple devices.
+The iOS application extends the same general workflow to Apple devices and is currently under development.
 
-This section can later be used to describe:
-
-- current development status
-- planned feature parity with Android
-- installation or TestFlight details
-- repository and release information
+A public GitHub repository link will be added here once the iOS codebase is available publicly.
 
 ## Study Manager
 
@@ -43,6 +35,10 @@ The Study Manager is a web-based tool for study preparation and post-study log p
 The public Study Manager is available here:
 
 <https://carwatch-tools.github.io/study-manager/>
+
+The Study Manager source code is available on GitHub:
+
+<https://github.com/carwatch-tools/study-manager>
 
 It can be used to:
 
