@@ -111,6 +111,7 @@ make clean-all
 - The local MinimalDoc binary is stored in `.tools/bin/minimaldoc`.
 - The build pipeline applies a small post-processing step to generated HTML so the homepage and content pages can use the project-specific layout and branding that MinimalDoc does not expose through config alone.
 - Brand assets from `docs/brand/` and `docs/site.webmanifest` are copied into the built site during local and CI builds.
+- The build step clears the output directory first so deleted pages are not accidentally kept in the generated site.
 - If `.tools/bin/minimaldoc` is missing, `make`, `make build`, `make serve`, and `make view` will install it automatically when Go is available.
 - The first local install may take a moment because Go downloads the MinimalDoc module and its dependencies.
 - If you are offline and do not already have a working `minimaldoc` binary, local installation will fail.
@@ -135,7 +136,6 @@ The GitHub Pages site currently provides:
 
 - a landing page for the CARWatch project
 - links for the Android app, the Study Manager, project pages, publications, and related resources
-- a structured news section ready for future updates
 - a formal privacy-policy page with placeholder content for app-store compliance work
 
 ## Publication

@@ -51,4 +51,4 @@ It can be used to:
 - prepare study materials
 - process exported CARWatch log files
 
-This part of the workflow remains completely client-side in the browser, so any exported study data does is not uploaded to external servers for processing.
+This part of the workflow remains completely client-side in the browser, so exported study data is not uploaded to external servers for processing.

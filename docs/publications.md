@@ -43,4 +43,4 @@ As of April 2026, the following publications have used CARWatch in their researc
 
 > Richer, R., Küderle, A., Dörr, J., Rohleder, N., & Eskofier, B. M. (2021). Assessing the Influence of the Inner Clock on the Cortisol Awakening Response and Pre-Awakening Movement. 2021 IEEE EMBS International Conference on Biomedical and Health Informatics (BHI), 1–4. https://doi.org/10.1109/BHI50953.2021.9508529
 
-Did you use CARWatch in your own publication? Let us know at <a href="mailto:robert.richer@fau.de">robert.richer@fau.de</a>.
+Did you use CARWatch in your own publication? Let us know at [robert.richer@fau.de](mailto:robert.richer@fau.de).

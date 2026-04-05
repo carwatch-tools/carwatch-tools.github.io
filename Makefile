@@ -39,6 +39,7 @@ install:
 
 build: $(MINIMALDOC)
 	python3 ./scripts/prepare_build_docs.py $(DOCS_DIR) $(BUILD_DOCS_DIR)
+	rm -rf $(DIST_DIR)
 	$(MINIMALDOC) build $(BUILD_DOCS_DIR) --base-url $(BASE_URL) --output $(DIST_DIR)
 	mkdir -p $(DIST_DIR)/brand
 	cp $(BUILD_DOCS_DIR)/brand/* $(DIST_DIR)/brand/

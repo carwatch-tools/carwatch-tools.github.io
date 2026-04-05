@@ -20,7 +20,7 @@ Current project contact for the public CARWatch release:
 
 - Robert Richer
 - Portabiles GmbH
-- Email: <a href="mailto:richer@portabiles.de">richer@portabiles.de</a>
+- Email: [richer@portabiles.de](mailto:richer@portabiles.de)
 
 If you have questions about this policy or about the handling of data in the CARWatch software framework, please contact the address above.
 
@@ -157,7 +157,7 @@ Where applicable law grants you such rights, you may have the right to request:
 
 You may also have the right to lodge a complaint with a competent data protection authority.
 
-To exercise privacy-related rights with respect to the CARWatch project website or general software framework, contact <a href="mailto:richer@portabiles.de">richer@portabiles.de</a>. For study-specific research data, please contact the institution conducting the respective study.
+To exercise privacy-related rights with respect to the CARWatch project website or general software framework, contact [richer@portabiles.de](mailto:richer@portabiles.de). For study-specific research data, please contact the institution conducting the respective study.
 
 ## 14. Children
 

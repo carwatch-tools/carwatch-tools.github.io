@@ -45,6 +45,7 @@ jobs:
             BASE_URL="https://${OWNER}.github.io/${REPO_NAME}"
           fi
 
+          rm -rf build-docs dist
           python3 ./scripts/prepare_build_docs.py ./docs ./build-docs
           "$(go env GOPATH)/bin/minimaldoc" build ./build-docs \
             --base-url "$BASE_URL" \
