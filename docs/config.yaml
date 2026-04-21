@@ -37,6 +37,8 @@ landing:
       url: /components/
     - text: Publications
       url: /publications/
+    - text: FAQ & Troubleshooting
+      url: /faq-troubleshooting/
     - text: Privacy
       url: /privacy/
   hero:
@@ -53,6 +55,10 @@ landing:
     title: "The CARWatch Framework Ecosystem"
     intro_text: "The CARWatch ecosystem consists of the following components:"
     items:
+      - icon_src: "/brand/globe.svg"
+        title: "Study Manager"
+        description: "A web-based study manager for study setup, generation of study materials, and processing of exported log files. Available online."
+        url: https://carwatch-tools.github.io/study-manager/
       - icon_src: "/brand/android.svg"
         title: "Android App"
         description: "The current smartphone app for reminders, awakening reports, and barcode-based recording of sampling events. Available on Google Play."
@@ -61,10 +67,6 @@ landing:
         title: "iOS App"
         description: "An iOS version is under development to extend the same workflow to Apple devices."
         url: /components/#ios-app
-      - icon_src: "/brand/globe.svg"
-        title: "Study Manager"
-        description: "A web-based study manager for study setup, generation of study materials, and processing of exported log files. Available online."
-        url: https://carwatch-tools.github.io/study-manager/
       # - emoji: "🏷️"
       #   title: "Study materials"
       #   description: "Barcodes and QR codes can be prepared in advance and distributed with sampling materials."
@@ -114,21 +116,21 @@ landing:
   links_grid:
     - id: "further-information"
       title: "Further Information"
-      description: "Selected entry points for publications, applications of CARWatch, and project resources."
+      description: "Additional information and resources related to CARWatch."
       columns: 3
       items:
-        - icon: "📄"
-          title: "Original Publication"
-          description: "Read the primary 2023 CARWatch paper and citation information."
-          url: /publications/#original-publication
-        - icon: "🧪"
-          title: "Further Publications"
-          description: "Placeholder for studies and publications that used CARWatch."
-          url: /publications/#publications-that-used-carwatch
         - icon: "🔗"
           title: "Components"
           description: "Find the Study Manager, app links, repository references, and related resources."
           url: /components/
+        - icon: "📄"
+          title: "Publications"
+          description: "Publications on and with CARWatch"
+          url: /publications/"
+        - icon: "❓"
+          title: "FAQ & Troubleshooting"
+          description: "Find common support topics, known issues, and troubleshooting guidance."
+          url: /faq-troubleshooting/
       order: 4
 
 footer:
@@ -142,6 +144,8 @@ footer:
           url: /components/
         - text: Publications
           url: /publications/
+        - text: FAQ & Troubleshooting
+          url: /faq-troubleshooting/
     - title: Policies
       items:
         - text: Privacy

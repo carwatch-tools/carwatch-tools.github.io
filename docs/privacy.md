@@ -2,7 +2,7 @@
 title: Privacy Policy
 description: Privacy information for the CARWatch apps, website, and Study Manager.
 menu_title: Privacy
-menu_order: 4
+menu_order: 5
 full_width: true
 ---
 

@@ -44,7 +44,7 @@ build: $(MINIMALDOC)
 	mkdir -p $(DIST_DIR)/brand
 	cp $(BUILD_DOCS_DIR)/brand/* $(DIST_DIR)/brand/
 	mkdir -p $(DIST_DIR)/img
-	cp $(BUILD_DOCS_DIR)/img/* $(DIST_DIR)/img/
+	cp -R $(BUILD_DOCS_DIR)/img/* $(DIST_DIR)/img/
 	cp $(BUILD_DOCS_DIR)/site.webmanifest $(DIST_DIR)/site.webmanifest
 	python3 ./scripts/postprocess_landing.py $(DIST_DIR)
 
