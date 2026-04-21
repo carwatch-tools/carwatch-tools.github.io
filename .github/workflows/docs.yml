@@ -53,7 +53,7 @@ jobs:
           mkdir -p dist/brand
           cp build-docs/brand/* dist/brand/
           mkdir -p dist/img
-          cp build-docs/img/* dist/img/
+          cp -R build-docs/img/* dist/img/
           cp build-docs/site.webmanifest dist/site.webmanifest
           python3 ./scripts/postprocess_landing.py dist
           cp dist/index.html dist/404.html
