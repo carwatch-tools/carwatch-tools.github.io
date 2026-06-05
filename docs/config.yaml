@@ -61,12 +61,12 @@ landing:
         url: https://carwatch-tools.github.io/study-manager/
       - icon_src: "/brand/android.svg"
         title: "Android App"
-        description: "The current smartphone app for reminders, awakening reports, and barcode-based recording of sampling events. Available on Google Play."
+        description: "The Android app for reminders, awakening reports, and barcode-based recording of sampling events. Available on Google Play."
         url: https://play.google.com/store/apps/details?id=de.fau.cs.mad.carwatch
       - icon_src: "/brand/apple.svg"
         title: "iOS App"
-        description: "An iOS version is under development to extend the same workflow to Apple devices."
-        url: /components/#ios-app
+        description: "The iOS app for reminders, awakening reports, and barcode-based recording of sampling events. Available on the App Store."
+        url: https://apps.apple.com/de/app/carwatchapp/id6761441417
       # - emoji: "🏷️"
       #   title: "Study materials"
       #   description: "Barcodes and QR codes can be prepared in advance and distributed with sampling materials."
@@ -81,7 +81,7 @@ landing:
       - title: "Prepare study materials"
         text: "Generate barcodes and QR codes and distribute them to the participants along with all other study materials."
       - title: "Download and initialize the app"
-        text: "Study participants download the Android app from Google Play and configure it by scanning the QR code."
+        text: "Study participants download the app from Google Play or the App Store and configure it by scanning the QR code."
       - title: "Use the app"
         text: "Study participants use the app during data collection to report awakening and record saliva sample intake."
       - title: "Share and process the exported logs"
@@ -95,24 +95,30 @@ landing:
     text: "Interested in using CARWatch in your own study or research project? Contact us at"
     email: "robert.richer@fau.de"
   text_blocks:
+    - id: "news"
+      title: "News"
+      content: "<div class=\"news-callout\"><div class=\"news-meta\"><span>Release</span><time datetime=\"2026-06-04\">2026-06-04</time></div><h3>CARWatch iOS app released</h3><p>The CARWatch iOS app is now available on the App Store! Let us know if you have any feedback or questions.</p><a class=\"news-link\" href=\"https://apps.apple.com/de/app/carwatchapp/id6761441417\">Download on the App Store</a></div>"
+      alignment: "left"
+      max_width: "900px"
+      order: 1
     - id: "what-is-carwatch"
       title: "What is CARWatch?"
       content: "<p><strong>CARWatch</strong> is an open-source framework for supporting <strong>saliva sampling field studies</strong>. It combines mobile applications for <strong>Android</strong> and <strong>iOS</strong> used during data collection with a <strong>web-based Study Manager</strong>.</p><p>The framework was originally developed as a single Android app for <strong>cortisol awakening response (CAR)</strong> research and has since been expanded into a broader <strong>cross-platform ecosystem</strong> for studies in which saliva samples are collected in the field.</p>"
       alignment: "left"
       max_width: "900px"
-      order: 1
+      order: 2
     - id: "why-carwatch"
       title: "Why CARWatch?"
       content: "<p>The <strong>cortisol awakening response</strong> is a widely used marker in psychoneuroendocrine research, but its assessment is <strong>highly time-critical</strong>. Even short delays between awakening and sampling can systematically distort <strong>CAR estimates</strong> and contribute to inconsistent findings in field studies.</p><p>CARWatch was developed to support <strong>more objective recording</strong> of sample events outside the lab. <strong>Barcode scans</strong> document sample events with timestamps, <strong>automated reminders</strong> support protocol adherence, and <strong>QR codes</strong> transfer predefined study settings to the app.</p>"
       alignment: "left"
       max_width: "900px"
-      order: 2
+      order: 3
     - id: "workflow"
       title: "Workflow"
       content: ""
       alignment: "left"
       max_width: "900px"
-      order: 3
+      order: 4
   links_grid:
     - id: "further-information"
       title: "Further Information"
@@ -131,7 +137,7 @@ landing:
           title: "FAQ & Troubleshooting"
           description: "Find common support topics, known issues, and troubleshooting guidance."
           url: /faq-troubleshooting/
-      order: 4
+      order: 5
 
 footer:
   copyright: "© Copyright 2026, Robert Richer, Friedrich-Alexander-Universität Erlangen-Nürnberg (FAU)."

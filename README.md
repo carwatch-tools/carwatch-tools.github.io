@@ -135,7 +135,7 @@ Stop the old process and then run `make serve` again.
 The GitHub Pages site currently provides:
 
 - a landing page for the CARWatch project
-- links for the Android app, the Study Manager, project pages, publications, and related resources
+- links for the Android and iOS apps, the Study Manager, project pages, publications, and related resources
 - a formal privacy-policy page with placeholder content for app-store compliance work
 
 ## Publication
