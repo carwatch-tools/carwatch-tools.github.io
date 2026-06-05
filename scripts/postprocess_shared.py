@@ -165,6 +165,11 @@ def inject_brand_assets(html: str, site_config: dict | None = None) -> str:
 .markdown-body li{{margin-bottom:.45rem}}
 .markdown-body blockquote{{max-width:68ch;background:var(--bg-secondary);border-left:4px solid var(--accent-primary);padding:1rem 1.1rem;border-radius:.5rem}}
 .markdown-body table{{background:var(--bg-primary);border-radius:.75rem;overflow:hidden}}
+.store-badges{{display:flex;align-items:center;gap:.9rem;flex-wrap:wrap;margin:1.25rem 0 2rem}}
+.store-badge{{display:inline-flex;align-items:center;height:3.5rem;line-height:0;overflow:hidden}}
+.store-badge img{{display:block;width:auto}}
+.store-badge-apple img{{height:3.5rem}}
+.store-badge-google img{{height:5.2rem}}
 .markdown-body img[src^="/img/faq/"]{{display:block;margin:1rem 0;max-width:100%;height:420px;width:auto;object-fit:contain}}
 .page-nav{{max-width:920px;margin:1.5rem auto 0}}
 @media (max-width: 768px){{
@@ -172,6 +177,10 @@ def inject_brand_assets(html: str, site_config: dict | None = None) -> str:
 .content-site-nav{{gap:.85rem 1rem}}
 .page-content{{padding:1.35rem 1rem;border-radius:.85rem}}
 .full-width-layout .main-content{{padding:1.25rem 1rem 3rem}}
+.store-badges{{gap:.7rem;margin-bottom:1.6rem}}
+.store-badge{{height:3rem}}
+.store-badge-apple img{{height:3rem}}
+.store-badge-google img{{height:4.45rem}}
 .markdown-body img[src^="/img/faq/"]{{height:auto;max-height:320px}}
 }}
 </style>""".strip()
