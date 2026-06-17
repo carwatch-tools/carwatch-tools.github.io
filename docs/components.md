@@ -50,7 +50,6 @@ The source code is available on [GitHub](https://github.com/carwatch-tools/carwa
 
 The current iOS app release is available on the [App Store](https://apps.apple.com/de/app/carwatchapp/id6761441417).
 
-
 ![CARWatch iOS App](/img/img_ios_app.png)
 
 The source code is available on [GitHub](https://github.com/carwatch-tools/carwatch-ios).
