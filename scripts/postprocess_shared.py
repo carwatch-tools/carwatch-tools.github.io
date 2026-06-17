@@ -139,6 +139,13 @@ def inject_brand_assets(html: str, site_config: dict | None = None) -> str:
 .feature-icon-wrap{{display:flex;align-items:center;justify-content:flex-start}}
 .feature-icon-img{{width:2rem;height:2rem;display:block}}
 .feature-icon-wrap svg{{width:2rem;height:2rem;display:block}}
+.news-callout{{max-width:68ch;border:1px solid var(--border-primary);border-left:5px solid var(--accent-primary);border-radius:.5rem;background:var(--accent-color-alpha);padding:1.15rem 1.25rem;margin-top:.35rem}}
+.news-meta{{display:flex;align-items:center;gap:.75rem;flex-wrap:wrap;margin-bottom:.65rem;color:var(--accent-primary);font-size:.85rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em}}
+.news-meta time{{color:var(--text-secondary);font-weight:650;text-transform:none;letter-spacing:0}}
+.news-callout h3{{margin:.15rem 0 .45rem;color:var(--text-primary);font-size:1.35rem;line-height:1.2;letter-spacing:0}}
+.news-callout p{{margin:.45rem 0 1rem;color:var(--text-secondary);line-height:1.6}}
+.news-link{{display:inline-flex;align-items:center;justify-content:center;border-radius:.4rem;background:var(--accent-primary);color:var(--bg-primary);font-weight:700;text-decoration:none;padding:.68rem .95rem;line-height:1.1}}
+.news-link:hover{{background:var(--accent-hover);color:var(--bg-primary);text-decoration:none}}
 .workflow-steps{{display:grid;gap:1rem;margin-top:1.25rem}}
 .workflow-step{{display:grid;grid-template-columns:2.25rem 1fr;gap:1rem;align-items:start;padding:1rem 1.1rem;border:1px solid var(--border-primary);border-radius:.9rem;background:var(--bg-secondary)}}
 .workflow-step-number{{display:inline-flex;align-items:center;justify-content:center;width:2.25rem;height:2.25rem;border-radius:999px;background:var(--accent-primary);color:var(--bg-primary);font-weight:700;line-height:1}}
@@ -165,6 +172,11 @@ def inject_brand_assets(html: str, site_config: dict | None = None) -> str:
 .markdown-body li{{margin-bottom:.45rem}}
 .markdown-body blockquote{{max-width:68ch;background:var(--bg-secondary);border-left:4px solid var(--accent-primary);padding:1rem 1.1rem;border-radius:.5rem}}
 .markdown-body table{{background:var(--bg-primary);border-radius:.75rem;overflow:hidden}}
+.store-badges{{display:flex;align-items:center;gap:.9rem;flex-wrap:wrap;margin:1.25rem 0 2rem}}
+.store-badge{{display:inline-flex;align-items:center;height:3.5rem;line-height:0;overflow:hidden}}
+.store-badge img{{display:block;width:auto}}
+.store-badge-apple img{{height:3.5rem}}
+.store-badge-google img{{height:5.2rem}}
 .markdown-body img[src^="/img/faq/"]{{display:block;margin:1rem 0;max-width:100%;height:420px;width:auto;object-fit:contain}}
 .page-nav{{max-width:920px;margin:1.5rem auto 0}}
 @media (max-width: 768px){{
@@ -172,6 +184,12 @@ def inject_brand_assets(html: str, site_config: dict | None = None) -> str:
 .content-site-nav{{gap:.85rem 1rem}}
 .page-content{{padding:1.35rem 1rem;border-radius:.85rem}}
 .full-width-layout .main-content{{padding:1.25rem 1rem 3rem}}
+.news-callout{{padding:1rem}}
+.news-callout h3{{font-size:1.18rem}}
+.store-badges{{gap:.7rem;margin-bottom:1.6rem}}
+.store-badge{{height:3rem}}
+.store-badge-apple img{{height:3rem}}
+.store-badge-google img{{height:4.45rem}}
 .markdown-body img[src^="/img/faq/"]{{height:auto;max-height:320px}}
 }}
 </style>""".strip()
