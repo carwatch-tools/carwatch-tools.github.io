@@ -144,6 +144,7 @@ def inject_brand_assets(html: str, site_config: dict | None = None) -> str:
 .news-meta time{{color:var(--text-secondary);font-weight:650;text-transform:none;letter-spacing:0}}
 .news-callout h3{{margin:.15rem 0 .45rem;color:var(--text-primary);font-size:1.35rem;line-height:1.2;letter-spacing:0}}
 .news-callout p{{margin:.45rem 0 1rem;color:var(--text-secondary);line-height:1.6}}
+.news-image{{display:block;width:min(100%,34rem);height:auto;margin:.75rem auto 1rem;background:transparent}}
 .news-link{{display:inline-flex;align-items:center;justify-content:center;border-radius:.4rem;background:var(--accent-primary);color:var(--bg-primary);font-weight:700;text-decoration:none;padding:.68rem .95rem;line-height:1.1}}
 .news-link:hover{{background:var(--accent-hover);color:var(--bg-primary);text-decoration:none}}
 .workflow-steps{{display:grid;gap:1rem;margin-top:1.25rem}}

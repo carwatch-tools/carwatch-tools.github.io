@@ -97,7 +97,7 @@ landing:
   text_blocks:
     - id: "news"
       title: "News"
-      content: "<div class=\"news-callout\"><div class=\"news-meta\"><span>Release</span><time datetime=\"2026-06-04\">2026-06-04</time></div><h3>CARWatch iOS app released</h3><p>The CARWatch iOS app is now available on the App Store! Let us know if you have any feedback or questions.</p><a class=\"news-link\" href=\"https://apps.apple.com/de/app/carwatchapp/id6761441417\">Download on the App Store</a></div>"
+      content: "<div class=\"news-callout\"><div class=\"news-meta\"><span>Release</span><time datetime=\"2026-06-30\">2026-06-30</time></div><h3>CARWatch Android app updated to v3.0.1</h3><p>The CARWatch Android app now has a refreshed design and updated participant workflows. The new release adds a study-details step during onboarding, clearer navigation, daily alarm and sample status overviews, pending wake-up and end-of-day alerts, and support for bedtime/evening sample reminders.</p><img class=\"news-image\" src=\"/img/img_android_app.png\" alt=\"Updated CARWatch Android app screens\"><a class=\"news-link\" href=\"https://play.google.com/store/apps/details?id=de.fau.cs.mad.carwatch\">Get it on Google Play</a></div><div class=\"news-callout\"><div class=\"news-meta\"><span>Release</span><time datetime=\"2026-06-04\">2026-06-04</time></div><h3>CARWatch iOS app released</h3><p>The CARWatch iOS app is now available on the App Store! Let us know if you have any feedback or questions.</p><a class=\"news-link\" href=\"https://apps.apple.com/de/app/carwatchapp/id6761441417\">Download on the App Store</a></div>"
       alignment: "left"
       max_width: "900px"
       order: 1
