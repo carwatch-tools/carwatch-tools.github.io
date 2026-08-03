@@ -25,6 +25,18 @@ This part of the workflow remains completely client-side in the browser, so expo
 
 The source code for the Study Manager is available on [GitHub](https://github.com/carwatch-tools/study-manager).
 
+## Software Packages
+
+CARWatch provides language-specific software packages for processing CARWatch logs and saliva data after collection.
+
+### Python Package
+
+The [CARWatch Python package](https://github.com/carwatch-tools/carwatch-python) provides tools for loading, converting, validating, and analysing CARWatch logs and saliva data. Version 1.0.0 is available from the [GitHub release](https://github.com/carwatch-tools/carwatch-python/releases/tag/v1.0.0).
+
+### R Package
+
+An R package for processing CARWatch and saliva data is in development. Its release and documentation will be added here.
+
 
 ## Smartphone Apps
 

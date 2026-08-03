@@ -135,6 +135,9 @@ def inject_brand_assets(html: str, site_config: dict | None = None) -> str:
 .markdown-body h3{{color:var(--accent-primary)}}
 .hero-title.brand-title{{display:inline-flex;align-items:center;gap:1rem}}
 .hero-title .brand-mark{{width:5rem;height:5rem}}
+.features-section .features-grid{{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:960px){{.features-section .features-grid{{grid-template-columns:repeat(2,minmax(0,1fr))}}}}
+@media (max-width:640px){{.features-section .features-grid{{grid-template-columns:1fr}}}}
 .features-section .feature-emoji{{display:flex;align-items:center;justify-content:flex-start;color:var(--accent-primary);margin-bottom:1rem;line-height:1}}
 .feature-icon-wrap{{display:flex;align-items:center;justify-content:flex-start}}
 .feature-icon-img{{width:2rem;height:2rem;display:block}}
