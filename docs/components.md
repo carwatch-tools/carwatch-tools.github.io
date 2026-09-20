@@ -8,6 +8,8 @@ full_width: true
 
 # Components
 
+For your first study, follow the [getting-started guide](/getting-started/) from study preparation to data analysis.
+
 ## Study Manager
 
 The Study Manager is a web-based tool for study configuration, study material preparation, and post-study log processing. It's available [here](https://carwatch-tools.github.io/study-manager/).
@@ -82,3 +84,15 @@ The current iOS app release is available on the [App Store](https://apps.apple.c
 ![CARWatch iOS App](/img/img_ios_app.png)
 
 The source code is available on [GitHub](https://github.com/carwatch-tools/carwatch-ios).
+
+## Support and contributions
+
+CARWatch is developed across the repositories in the [CARWatch GitHub organisation](https://github.com/carwatch-tools). Use the issue tracker for the component concerned to report a bug or discuss a contribution:
+
+- [Study Manager issues](https://github.com/carwatch-tools/study-manager/issues)
+- [Android app issues](https://github.com/carwatch-tools/carwatch-android/issues)
+- [iOS app issues](https://github.com/carwatch-tools/carwatch-ios/issues)
+- [R package issues](https://github.com/carwatch-tools/carwatch-r/issues)
+- [Python package issues](https://github.com/carwatch-tools/carwatch-python/issues)
+
+Include the component version, relevant device or operating system, and steps to reproduce the problem. Use a minimal example without participant data in public reports.

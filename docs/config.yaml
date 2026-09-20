@@ -33,6 +33,8 @@ landing:
   nav:
     - text: Overview
       url: /
+    - text: Get started
+      url: /getting-started/
     - text: Components
       url: /components/
     - text: Publications
@@ -43,17 +45,17 @@ landing:
       url: /privacy/
   hero:
     title: "CARWatch"
-    subtitle: "An open-source framework for improving objective saliva sampling in the field."
+    subtitle: "Plan saliva sampling studies, record sampling times, and analyse your data with open-source tools for researchers and participants."
     buttons:
-      - text: "Components"
-        url: /components/
+      - text: "Get started"
+        url: /getting-started/
         primary: true
-      - text: "Publications"
-        url: /publications/
+      - text: "Open Study Manager"
+        url: https://carwatch-tools.github.io/study-manager/
         primary: false
   features:
     title: "The CARWatch Framework Ecosystem"
-    intro_text: "The CARWatch ecosystem consists of the following components:"
+    intro_text: "Use the Study Manager to prepare your study, the mobile apps to record sampling events, and R or Python for reproducible analysis."
     items:
       - icon_src: "/brand/globe.svg"
         title: "Study Manager"
@@ -69,83 +71,63 @@ landing:
         url: https://apps.apple.com/de/app/carwatchapp/id6761441417
       - icon_src: "/brand/code.svg"
         title: "Python Package"
-        description: "A Python package for loading, converting, validating, and analyzing CARWatch logs and saliva data. Available on PyPi."
+        description: "A Python package for loading, converting, validating, and analyzing CARWatch logs and saliva data. Available on PyPI."
         url: https://pypi.org/project/carwatch/
       - icon_src: "/brand/code.svg"
         title: "R Package"
         description: "An R package for processing CARWatch logs, assessing sampling-time compliance, and analyzing saliva data. Available on CRAN."
         url: https://CRAN.R-project.org/package=carwatch
-      # - emoji: "🏷️"
-      #   title: "Study materials"
-      #   description: "Barcodes and QR codes can be prepared in advance and distributed with sampling materials."
-      # - emoji: "📊"
-      #   title: "Structured output"
-      #   description: "Exported CARWatch logs can be transformed into structured datasets for downstream analyses."
   workflow:
-    intro_text: "The typical workflow of using <strong>CARWatch</strong> is the following:"
+    intro_text: "<strong>Study personnel</strong> use the browser-based Study Manager to configure the study and generate barcode labels and participant QR codes, then print and prepare the sampling materials. <strong>Participants</strong> use the CARWatch app on an Android or iOS smartphone together with the labelled tubes, QR code, and instructions supplied by the study team. <a href=\"/getting-started/\">Follow the getting-started guide</a> for materials, app setup, and data processing."
     steps:
-      - title: "Configure the study"
-        text: "Define the study settings in the web-based Study Manager."
-      - title: "Prepare study materials"
-        text: "Generate barcodes and QR codes and distribute them to the participants along with all other study materials."
-      - title: "Download and initialize the app"
-        text: "Study participants download the app from Google Play or the App Store and configure it by scanning the QR code."
-      - title: "Use the app"
-        text: "Study participants use the app during data collection to report awakening and record saliva sample intake."
-      - title: "Share and process the exported logs"
-        text: "After the study, participants share log files with the study personnel. Researchers can process the logs locally in the web-based Study Manager or use the R and Python packages to process logs and analyse saliva data."
+      - title: "Plan and prepare"
+        text: "Study personnel configure the sampling schedule in the Study Manager, print barcode labels and participant QR codes, and distribute the prepared materials."
+      - title: "Set up the app"
+        text: "Participants install the Android or iOS app and scan their study QR code. Walk through the sampling procedure together."
+      - title: "Record sampling events"
+        text: "Participants follow reminders, report awakening, and scan each sample barcode when collecting saliva."
+      - title: "Export and analyse"
+        text: "Participants export their logs and share them with the study team. Study personnel process logs in the browser or use R and Python to combine sampling records with laboratory measurements."
     image:
       src: "/img/carwatch_overview.png"
       alt: "Overview of the CARWatch workflow from study preparation to data processing"
       max_width: "760px"
   contact:
-    title: "Contact"
-    text: "Interested in using CARWatch in your own study or research project? Contact us at"
+    title: "Project and contact"
+    text: "Project and research enquiries: Robert Richer at"
     email: "robert.richer@fau.de"
+    links:
+      - text: "Source code on GitHub"
+        url: https://github.com/carwatch-tools
+      - text: "Report an issue or contribute"
+        url: /components/#support-and-contributions
+      - text: "Privacy enquiries and responsible contact"
+        url: /privacy/#1-controller-and-contact
   text_blocks:
-    - id: "news"
-      title: "News"
-      content: ""
+    - id: "why-carwatch"
+      title: "Saliva sampling, from study setup to analysis"
+      content: "<p><strong>CARWatch</strong> connects study preparation, participant guidance, and data processing in one open-source research framework. It was developed for <strong>cortisol awakening response (CAR)</strong> research and also supports other saliva sampling protocols.</p><p>Sampling times matter in field studies. Reminders guide participants, barcode scans timestamp sampling events, and structured logs help researchers review timing and protocol adherence.</p>"
       alignment: "left"
       max_width: "900px"
       order: 1
-    - id: "what-is-carwatch"
-      title: "What is CARWatch?"
-      content: "<p><strong>CARWatch</strong> is an open-source framework for supporting <strong>saliva sampling field studies</strong>. It combines mobile applications for <strong>Android</strong> and <strong>iOS</strong> used during data collection with a <strong>web-based Study Manager</strong> and <strong>software packages</strong> for processing study data.</p><p>The framework was originally developed as a single Android app for <strong>cortisol awakening response (CAR)</strong> research and has since been expanded into a broader <strong>cross-platform ecosystem</strong> for studies in which saliva samples are collected in the field.</p>"
-      alignment: "left"
-      max_width: "900px"
-      order: 2
-    - id: "why-carwatch"
-      title: "Why CARWatch?"
-      content: "<p>The <strong>cortisol awakening response</strong> is a widely used marker in psychoneuroendocrine research, but its assessment is <strong>highly time-critical</strong>. Even short delays between awakening and sampling can systematically distort <strong>CAR estimates</strong> and contribute to inconsistent findings in field studies.</p><p>CARWatch was developed to support <strong>more objective recording</strong> of sample events outside the lab. <strong>Barcode scans</strong> document sample events with timestamps, <strong>automated reminders</strong> support protocol adherence, and <strong>QR codes</strong> transfer predefined study settings to the app.</p>"
-      alignment: "left"
-      max_width: "900px"
-      order: 3
     - id: "workflow"
       title: "Workflow"
       content: ""
       alignment: "left"
       max_width: "900px"
+      order: 2
+    - id: "scientific-background"
+      title: "Scientific background"
+      content: "<p>The original CARWatch smartphone application was introduced by <strong>Richer et al. (2023)</strong> in <em>Psychoneuroendocrinology</em>. The paper describes the original application and its evaluation; the framework has since expanded to include additional platforms and analysis tools.</p><p><a href=\"https://doi.org/10.1016/j.psyneuen.2023.106073\">Read the original paper</a> · <a href=\"/publications/#citation\">Citation and scientific background</a></p>"
+      alignment: "left"
+      max_width: "900px"
+      order: 3
+    - id: "news"
+      title: "News"
+      content: ""
+      alignment: "left"
+      max_width: "900px"
       order: 4
-  links_grid:
-    - id: "further-information"
-      title: "Further Information"
-      description: "Additional information and resources related to CARWatch."
-      columns: 3
-      items:
-        - icon: "🔗"
-          title: "Components"
-          description: "Find the Study Manager, app links, repository references, and related resources."
-          url: /components/
-        - icon: "📄"
-          title: "Publications"
-          description: "Publications on and with CARWatch"
-          url: /publications/"
-        - icon: "❓"
-          title: "FAQ & Troubleshooting"
-          description: "Find common support topics, known issues, and troubleshooting guidance."
-          url: /faq-troubleshooting/
-      order: 5
 
 footer:
   copyright: "© Copyright 2026, Robert Richer, Friedrich-Alexander-Universität Erlangen-Nürnberg (FAU)."
@@ -154,6 +136,8 @@ footer:
       items:
         - text: Overview
           url: /
+        - text: Get started
+          url: /getting-started/
         - text: Components
           url: /components/
         - text: Publications

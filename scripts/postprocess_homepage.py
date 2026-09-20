@@ -75,7 +75,7 @@ def add_hero_logo(html: str) -> str:
 
 def reorder_landing_sections(html: str) -> str:
     features = find_section(html, "features-section", "The CARWatch Framework Ecosystem")
-    anchor = find_section(html, "text-section", "Why CARWatch")
+    anchor = find_section(html, "text-section", ">Workflow</h2>")
 
     if not features or not anchor:
         return html

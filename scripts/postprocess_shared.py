@@ -23,12 +23,19 @@ def render_contact_html(contact_config: dict) -> str:
     if not email:
         return ""
 
+    links = "".join(
+        f'<li><a href="{escape(str(item["url"]))}">{escape(str(item["text"]))}</a></li>'
+        for item in contact_config.get("links", [])
+    )
+    resource_links = f'<ul class="contact-links">{links}</ul>' if links else ""
+
     return (
         '<section class="text-section contact-section">'
         '<div class="text-section-content align-left" style="max-width: 900px;">'
         f'<h2 class="text-section-title">{title}</h2>'
         '<div class="text-section-body">'
         f'<p>{text} <a href="mailto:{email}"><strong>{email}</strong></a>.</p>'
+        f"{resource_links}"
         "</div>"
         "</div>"
         "</section>"
@@ -169,7 +176,8 @@ def inject_brand_assets(html: str, site_config: dict | None = None) -> str:
 .content-site-nav{{display:flex;align-items:center;gap:1.35rem;flex-wrap:wrap}}
 .content-site-nav a{{color:var(--text-secondary);text-decoration:none;font-size:var(--font-size-md-lg)}}
 .content-site-nav a:hover{{color:var(--link-color)}}
-.full-width-layout .main-content{{max-width:1100px;margin:0 auto;padding:2.5rem 1.5rem 4rem}}
+.container.full-width-layout{{width:100%;max-width:100%}}
+.full-width-layout .main-content{{max-width:1100px;min-width:0;margin:0 auto;padding:2.5rem 1.5rem 4rem}}
 .page-content{{max-width:920px;margin:0 auto;background:var(--bg-primary);border:1px solid var(--border-primary);border-radius:1rem;padding:2rem 2.25rem;box-shadow:var(--shadow-sm)}}
 .page-header{{margin-bottom:2rem;padding-bottom:1.25rem;border-bottom:1px solid var(--border-primary)}}
 .page-header h1{{font-size:clamp(2rem,4vw,2.8rem);line-height:1.1;letter-spacing:-0.02em;margin:0}}

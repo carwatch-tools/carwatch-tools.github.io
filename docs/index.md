@@ -9,6 +9,8 @@ menu_order: 1
 
 CARWatch is an open-source framework for objective saliva sampling studies. It combines mobile apps for recording sample events with a web-based Study Manager for study preparation and log processing, and R and Python packages for processing logs and analysing saliva data.
 
+Start with the [getting-started guide](/getting-started/) or [open the Study Manager](https://carwatch-tools.github.io/study-manager/).
+
 ## Purpose
 
 CARWatch aims to support objective and low-cost saliva sampling in real-world, unsupervised settings. It is intended to reduce reliance on self-reported timestamps alone and to support better protocol adherence in field studies.
@@ -35,6 +37,7 @@ Researchers can use CARWatch to:
 
 ## Further Information
 
+- [Get started](/getting-started/)
 - [Overview](/overview/)
 - [Components](/components/)
 - [Publications](/publications/)
