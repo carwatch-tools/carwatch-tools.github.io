@@ -69,8 +69,8 @@ landing:
         url: https://apps.apple.com/de/app/carwatchapp/id6761441417
       - icon_src: "/brand/code.svg"
         title: "Python Package"
-        description: "A Python package for loading, converting, validating, and analysing CARWatch logs and saliva data. Available on GitHub."
-        url: https://github.com/carwatch-tools/carwatch-python
+        description: "A Python package for loading, converting, validating, and analyzing CARWatch logs and saliva data. Available on PyPi."
+        url: https://pypi.org/project/carwatch/
       - icon_src: "/brand/code.svg"
         title: "R Package"
         description: "An R package for processing CARWatch logs, assessing sampling-time compliance, and analyzing saliva data. Available on CRAN."
