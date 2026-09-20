@@ -17,6 +17,7 @@ Since then, CARWatch has developed into a broader framework. In addition to the 
 - study configuration
 - preparation of sampling materials
 - processing of CARWatch log files after data collection
+- assessment of sampling-time compliance and analysis of saliva data with the [R and Python packages](/components/#software-packages)
 
 The framework was originally motivated by cortisol awakening response research, but it is not limited to this use case. CARWatch can also support more flexible saliva sampling protocols, including multiple sampling days, different numbers of samples per day, and combinations of relative and absolute alarms.
 

@@ -31,11 +31,28 @@ CARWatch provides language-specific software packages for processing CARWatch lo
 
 ### Python Package
 
-The [CARWatch Python package](https://github.com/carwatch-tools/carwatch-python) provides tools for loading, converting, validating, and analysing CARWatch logs and saliva data. Version 1.0.0 is available from the [GitHub release](https://github.com/carwatch-tools/carwatch-python/releases/tag/v1.0.0).
+The [CARWatch Python package](https://github.com/carwatch-tools/carwatch-python) provides tools for loading, converting, validating, and analysing CARWatch logs and saliva data. The current version is available on [PyPi](https://pypi.org/project/carwatch/).
+
+Install it with Python 3.10 or newer:
+
+```bash
+pip install carwatch
+```
+
+See the [package documentation](https://carwatch-python.readthedocs.io/en/latest/) for tutorials and the function reference.
 
 ### R Package
 
-An R package for processing CARWatch and saliva data is in development. Its release and documentation will be added here.
+The [CARWatch R package](https://github.com/carwatch-tools/carwatch-r) is available on [CRAN](https://CRAN.R-project.org/package=carwatch).
+
+Install it from CRAN with R 4.3 or newer:
+
+```r
+install.packages("carwatch")
+library(carwatch)
+```
+
+See the [package documentation](https://carwatch-tools.github.io/carwatch-r/) for tutorials and the function reference.
 
 
 ## Smartphone Apps
