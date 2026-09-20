@@ -130,6 +130,41 @@ Stop the old process and then run `make serve` again.
 
 `make clean-all` removes both `.build/` and `.tools/`.
 
+## Updating News
+
+Edit [`docs/news.json`](docs/news.json) to add or update homepage news. Each entry
+uses plain text; no HTML is needed. For example, add an object to the JSON array:
+
+```json
+{
+  "id": "r-package-update",
+  "date": "2026-09-20",
+  "title": "CARWatch R package updated",
+  "text": "Describe the update here.",
+  "link": {
+    "url": "https://CRAN.R-project.org/package=carwatch",
+    "label": "View the package on CRAN"
+  }
+}
+```
+
+Required fields are `id` (unique lowercase letters, numbers and hyphens), `date`
+(`YYYY-MM-DD`), `title`, and `text`. Optional `link` objects contain `url` and
+`label`; optional `image` objects contain `src` and descriptive `alt` text.
+URLs may be HTTP(S) URLs or site-root paths such as `/img/img_android_app.png`.
+Use `\n` in the text for line breaks. Omit optional objects when unused.
+
+News are sorted newest first, preserving file order for matching dates. Only
+the newest entry opens initially; opening another closes the previous entry.
+An empty array hides the entire section. Invalid entries fail the build with
+the file and entry details.
+
+The `news` block in `docs/config.yaml` controls the section heading and position;
+leave its `content` empty. [`scripts/news.py`](scripts/news.py) renders the news
+through the homepage postprocessor, using native HTML disclosures without a
+JavaScript dependency. Run `make build` and `make view` to preview changes.
+Renderer checks run with `python3 -m unittest discover -s tests`.
+
 ## Current Scope
 
 The GitHub Pages site currently provides:

@@ -1,0 +1,56 @@
+[
+  {
+    "id": "carwatch-r-package-now-on-cran",
+    "date": "2026-09-17",
+    "title": "CARWatch R package now on CRAN",
+    "text": "Version 1.0.1 of the CARWatch R package is now available on CRAN. It supports processing sampling logs, assessing sampling-time compliance, merging laboratory measurements, and analysing saliva data. Install it in R with install.packages(\"carwatch\").",
+    "link": {
+      "url": "https://CRAN.R-project.org/package=carwatch",
+      "label": "View the package on CRAN"
+    }
+  },
+  {
+    "id": "carwatch-python-package-released",
+    "date": "2026-08-03",
+    "title": "CARWatch Python package released",
+    "text": "Version 1.0.0 of the CARWatch Python package is now available. It provides tools for loading, converting, validating, and analysing CARWatch logs and saliva data.",
+    "link": {
+      "url": "https://github.com/carwatch-tools/carwatch-python",
+      "label": "View the release on GitHub"
+    }
+  },
+  {
+    "id": "carwatch-ios-app-updated-to-v1-1",
+    "date": "2026-07-19",
+    "title": "CARWatch iOS app updated to v1.1",
+    "text": "Version 1.1 of the CARWatch iOS app is now available on the App Store.",
+    "link": {
+      "url": "https://apps.apple.com/de/app/carwatchapp/id6761441417",
+      "label": "Download on the App Store"
+    }
+  },
+  {
+    "id": "carwatch-android-app-updated-to-v3-0-1",
+    "date": "2026-06-30",
+    "title": "CARWatch Android app updated to v3.0.1",
+    "text": "The CARWatch Android app now has a refreshed design and updated participant workflows. The new release adds a study-details step during onboarding, clearer navigation, daily alarm and sample status overviews, pending wake-up and end-of-day alerts, and support for bedtime/evening sample reminders.",
+    "link": {
+      "url": "https://play.google.com/store/apps/details?id=de.fau.cs.mad.carwatch",
+      "label": "Get it on Google Play"
+    },
+    "image": {
+      "src": "/img/img_android_app.png",
+      "alt": "Updated CARWatch Android app screens"
+    }
+  },
+  {
+    "id": "carwatch-ios-app-released",
+    "date": "2026-06-04",
+    "title": "CARWatch iOS app released",
+    "text": "The CARWatch iOS app is now available on the App Store! Let us know if you have any feedback or questions.",
+    "link": {
+      "url": "https://apps.apple.com/de/app/carwatchapp/id6761441417",
+      "label": "Download on the App Store"
+    }
+  }
+]

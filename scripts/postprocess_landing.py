@@ -5,6 +5,8 @@ from __future__ import annotations
 import sys
 from pathlib import Path
 
+from news import load_news
+
 try:
     import yaml
 except ModuleNotFoundError:  # pragma: no cover - exercised in environments without PyYAML
@@ -124,7 +126,7 @@ def load_site_config() -> dict:
     return parse_simple_yaml(config_text)
 
 
-def process_html(target: Path, site_root: Path, site_config: dict) -> None:
+def process_html(target: Path, site_root: Path, site_config: dict, news_items: list[dict]) -> None:
     html = target.read_text(encoding="utf-8")
     landing_config = site_config.get("landing", {}) if isinstance(site_config, dict) else {}
     nav_items = landing_config.get("nav", []) if isinstance(landing_config, dict) else []
@@ -141,6 +143,8 @@ def process_html(target: Path, site_root: Path, site_config: dict) -> None:
             features_config=features_config,
             workflow_config=workflow_config,
             contact_config=contact_config,
+            news_items=news_items,
+            news_config=next((block for block in landing_config.get("text_blocks", []) if block.get("id") == "news"), {}),
         )
     else:
         rewritten = cleanup_content_page_chrome(rewritten, nav_items)
@@ -154,15 +158,20 @@ def main() -> int:
         return 1
 
     site_config = load_site_config()
+    news_items = load_news(Path(__file__).resolve().parent.parent / "docs" / "news.json")
     target = Path(sys.argv[1])
     if target.is_dir():
         site_root = target.resolve()
         for html_file in sorted(target.rglob("*.html")):
-            process_html(html_file, site_root, site_config)
+            process_html(html_file, site_root, site_config, news_items)
     else:
-        process_html(target, target.resolve().parent, site_config)
+        process_html(target, target.resolve().parent, site_config, news_items)
     return 0
 
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    try:
+        raise SystemExit(main())
+    except ValueError as error:
+        print(f"Build error: {error}", file=sys.stderr)
+        raise SystemExit(1)

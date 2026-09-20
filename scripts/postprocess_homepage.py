@@ -4,10 +4,11 @@ import re
 from html import escape
 from pathlib import Path
 
+from news import render_news_html
 from postprocess_shared import get_base_path, render_contact_html
 
 
-SECTION_RE = re.compile(r"<section class=\"([^\"]+)\">.*?</section>", re.DOTALL)
+SECTION_RE = re.compile(r"<section class=\"([^\"]+)\"[^>]*>.*?</section>", re.DOTALL)
 REPO_ROOT = Path(__file__).resolve().parent.parent
 
 
@@ -227,11 +228,24 @@ def append_contact_section(html: str, contact_config: dict) -> str:
     return html.replace("</main>", rendered + "\n\n</main>", 1)
 
 
+def replace_news_block(html: str, news_items: list[dict], news_config: dict) -> str:
+    if not news_config:
+        return html
+    title = str(news_config.get("title", "News"))
+    section = find_section(html, "text-section", f'>{escape(title)}</h2>')
+    if not section:
+        raise ValueError("news: configured homepage placeholder was not found")
+    start, end, _ = section
+    return html[:start] + render_news_html(news_items, title, get_base_path(html)) + html[end:]
+
+
 def process_homepage(
     html: str,
     features_config: dict,
     workflow_config: dict,
     contact_config: dict,
+    news_items: list[dict],
+    news_config: dict,
 ) -> str:
     html = add_hero_logo(html)
     html = reorder_landing_sections(html)
@@ -239,5 +253,6 @@ def process_homepage(
     html = link_feature_tiles(html, features_config.get("items", []))
     html = replace_feature_icons(html, features_config.get("items", []))
     html = replace_workflow_block(html, workflow_config)
+    html = replace_news_block(html, news_items, news_config)
     html = append_contact_section(html, contact_config)
     return html
